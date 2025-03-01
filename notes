@@ -26,7 +26,7 @@ npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
         - User flows
         - 
     - Design
-        - Wireframes
+        - Wireframes/Low-fidility
         - Moodboard
         - Style Guide
         - Components

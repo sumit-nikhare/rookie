@@ -499,171 +499,100 @@
                 <p class="text-xl font-bold">Concept Exploration</p>
                 <p class="text-gray-400 mt-4">During ideation, I explored multiple UI concepts for each core module of CHIP. Every concept was evaluated based on user role, workflow complexity, and technical feasibility, especially in low-connectivity environments.</p>
                 <p class="text-gray-400 mt-4">This was especially helpful in identifying:</p>
-                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
-                    <li>Confusing terminology</li>
-                    <li>Repetitive or unintuitive field orders</li>
-                    <li>Overload from long surveys or multi-tab forms</li>
-                </ul>
 
-                <div class="w-full mx-auto my-4">
+                <!-- <div class="w-full mx-auto my-4">
                     <img src="./images/chip/chip cover.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg shadow-md my-8" />
-                </div>
+                </div> -->
 
-                <div class="flex flex-col gap-2 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
-                    <p class="font-bold">Key Insight</p>
-                    <ul class="list-disc list-inside text-gray-400 space-y-2">
-                        <li>Users struggled with <b class="text-gray-200">long questions</b> long questions and often skipped fields they assumed weren’t applicable.</li>
-                        <li><b class="text-gray-200">Skip logic</b> was essential to reduce mental load.</li>
-                        <li>Supervisors wanted real-time syncing and completion alerts</li>
-                        <li>Field-level hints and error validation reduced hesitation during form input.</li>
-                    </ul>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 mt-8">
+                    <!-- Punch-IN / Punch-OUT -->
+                    <div class="flex flex-col gap-4 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
+                        <p class="text-xl font-bold">Punch-IN / Punch-OUT</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><b class="text-gray-200">Concept 1:</b> Simple tap-to-log system</li>
+                            <li><b class="text-gray-200">Concept 2 (selected):</b> Geo-tagged Punch-IN with time stamp, visual feedback, and status history</li>
+                        </ul>
+                        <p class="text-gray-400"><b class="text-gray-200">Why this works:</b> Promotes accountability, offers visibility to supervisors</p>
+                    </div>
+
+                    <!-- ABHA ID Integration -->
+                    <div class="flex flex-col gap-4 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
+                        <p class="text-xl font-bold">ABHA ID Integration</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li><b class="text-gray-200">Concept 1:</b> Separate workflow post-registration</li>
+                            <li><b class="text-gray-200">Concept 2 (selected):</b> Optional ABHA linking during or after registration via banner prompt</li>
+                        </ul>
+                        <p class="text-gray-400"><b class="text-gray-200">Why this works:</b> Keeps flow optional and non-blocking while promoting health stack integration</p>
+                    </div>
                 </div>
+                
                 <p class="text-gray-400 mt-4">To maintain data integrity and workflow clarity, the app is governed by a <b class="text-gray-200">Role-Based Access Control (RBAC) System</b>, which ensures that each user only accesses relevant modules and permissions based on their designation and facility level.</p>
             </div>
         </div>
 
-        <!-- Personas -->
+        <!-- User Flows -->
         <div class="flex flex-col gap-2">
-            <p class="text-xl font-bold mt-4">Personas</p>
-            <p class="text-gray-400 my-4">To design CHIP for real-world usability, I created role-based personas that represent the distinct needs, behaviors, and constraints of users across different healthcare levels. These personas helped ensure that each interface was tailored, contextual, and respectful of users’ daily challenges.</p>
+            <p class="text-xl font-bold mt-4">User Flows</p>
+            <p class="text-gray-400 mt-2">To design CHIP for real-world usability, I created role-based personas that represent the distinct needs, behaviors, and constraints of users across different healthcare levels. These personas helped ensure that each interface was tailored, contextual, and respectful of users’ daily challenges.</p>
 
-            <div class="grid grid-cols-1 gap-8">
-                <!-- ASHA (Village Level User) -->
-                <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
-                    <p class="text-xl font-bold">ASHA (Village Level User)</p>
-                    <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-24 h-auto mt-4"/>
-                    <p class="text-gray-400 mt-4"><b class="text-gray-200">Name:</b> Suman Devi</p>
-                    <p class="text-gray-400 mt-1"><b class="text-gray-200">Age:</b> 42</p>
-                    <p class="text-gray-400 mt-1"><b class="text-gray-200">Designation:</b> Accredited Social Health Activist (ASHA)</p>
-                    <p class="text-gray-400 mt-1"><b class="text-gray-200">Device:</b> Entry-level Android phone</p>
-                    <p class="text-gray-400 mt-1"><b class="text-gray-200">Digital Literacy:</b> Basic (familiar with calling, WhatsApp, and simple apps)</p>
+            <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                <li>App navigation is <b class="text-gray-200">contextualized by role</b>—ASHAs see fewer modules, while MOs have dashboard and supervision features.</li>
+                <li>Created <b class="text-gray-200">modular flows</b> so features could scale based on access level.</li>
+            </ul>
 
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 mt-8">
-                        <!-- Goals -->
-                        <div class="flex flex-col gap-2 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
-                            <p class="font-bold">Goals:</p>
-                            <ul class="list-disc list-inside text-gray-400 space-y-2">
-                                <li>Conduct household surveys (DHS), update health records</li>
-                                <li>Track pregnant women, newborns, and FP beneficiaries</li>
-                                <li>Punch-IN daily and sync data for supervisor review</li>
-                            </ul>
-                        </div>
-            
-                        <!-- Pain Points -->
-                        <div class="flex flex-col gap-2 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
-                            <p class="font-bold">Pain Points:</p>
-                            <ul class="list-disc list-inside text-gray-400 space-y-2">
-                                <li>Struggles with long, complex forms and medical terms</li>
-                                <li>Connectivity issues during fieldwork</li>
-                                <li>Needs frequent reminders and offline save support</li>
-                            </ul>
-                        </div>
-            
-                        <!-- Needs from CHIP -->
-                        <div class="flex flex-col gap-2 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
-                            <p class="font-bold">Needs from CHIP:</p>
-                            <ul class="list-disc list-inside text-gray-400 space-y-2">
-                                <li>Simple, guided forms with skip logic</li>
-                                <li>Section-wise progress tracking</li>
-                                <li>Local language support and visual cues</li>
-                            </ul>
-                        </div>
-                    </div>
-    
-                    <p class="text-gray-400 mt-4">To maintain data integrity and workflow clarity, the app is governed by a <b class="text-gray-200">Role-Based Access Control (RBAC) System</b>, which ensures that each user only accesses relevant modules and permissions based on their designation and facility level.</p>
-                </div>
-    
-                <!-- ANM (Sub-Health Center Level User) -->
-                <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
-                    <p class="text-xl font-bold">ASHA (Village Level User)</p>
-                    <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-24 h-auto mt-4"/>
-                    <p class="text-gray-400 mt-4"><b class="text-gray-200">Name:</b> Suman Devi</p>
-                    <p class="text-gray-400 mt-1"><b class="text-gray-200">Age:</b> 42</p>
-                    <p class="text-gray-400 mt-1"><b class="text-gray-200">Designation:</b> Accredited Social Health Activist (ASHA)</p>
-                    <p class="text-gray-400 mt-1"><b class="text-gray-200">Device:</b> Entry-level Android phone</p>
-                    <p class="text-gray-400 mt-1"><b class="text-gray-200">Digital Literacy:</b> Basic (familiar with calling, WhatsApp, and simple apps)</p>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 mt-8">
-                        <!-- Goals -->
-                        <div class="flex flex-col gap-2 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
-                            <p class="font-bold">Goals:</p>
-                            <ul class="list-disc list-inside text-gray-400 space-y-2">
-                                <li>Conduct household surveys (DHS), update health records</li>
-                                <li>Track pregnant women, newborns, and FP beneficiaries</li>
-                                <li>Punch-IN daily and sync data for supervisor review</li>
-                            </ul>
-                        </div>
-            
-                        <!-- Pain Points -->
-                        <div class="flex flex-col gap-2 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
-                            <p class="font-bold">Pain Points:</p>
-                            <ul class="list-disc list-inside text-gray-400 space-y-2">
-                                <li>Struggles with long, complex forms and medical terms</li>
-                                <li>Connectivity issues during fieldwork</li>
-                                <li>Needs frequent reminders and offline save support</li>
-                            </ul>
-                        </div>
-            
-                        <!-- Needs from CHIP -->
-                        <div class="flex flex-col gap-2 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
-                            <p class="font-bold">Needs from CHIP:</p>
-                            <ul class="list-disc list-inside text-gray-400 space-y-2">
-                                <li>Simple, guided forms with skip logic</li>
-                                <li>Section-wise progress tracking</li>
-                                <li>Local language support and visual cues</li>
-                            </ul>
-                        </div>
-                    </div>
-    
-                    <p class="text-gray-400 mt-4">To maintain data integrity and workflow clarity, the app is governed by a <b class="text-gray-200">Role-Based Access Control (RBAC) System</b>, which ensures that each user only accesses relevant modules and permissions based on their designation and facility level.</p>
-                </div>
-
-                <!-- CHO (Sub-Health Center Supervisor) -->
-                <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
-                    <p class="text-xl font-bold">ASHA (Village Level User)</p>
-                    <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-24 h-auto mt-4"/>
-                    <p class="text-gray-400 mt-4"><b class="text-gray-200">Name:</b> Suman Devi</p>
-                    <p class="text-gray-400 mt-1"><b class="text-gray-200">Age:</b> 42</p>
-                    <p class="text-gray-400 mt-1"><b class="text-gray-200">Designation:</b> Accredited Social Health Activist (ASHA)</p>
-                    <p class="text-gray-400 mt-1"><b class="text-gray-200">Device:</b> Entry-level Android phone</p>
-                    <p class="text-gray-400 mt-1"><b class="text-gray-200">Digital Literacy:</b> Basic (familiar with calling, WhatsApp, and simple apps)</p>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 mt-8">
-                        <!-- Goals -->
-                        <div class="flex flex-col gap-2 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
-                            <p class="font-bold">Goals:</p>
-                            <ul class="list-disc list-inside text-gray-400 space-y-2">
-                                <li>Conduct household surveys (DHS), update health records</li>
-                                <li>Track pregnant women, newborns, and FP beneficiaries</li>
-                                <li>Punch-IN daily and sync data for supervisor review</li>
-                            </ul>
-                        </div>
-            
-                        <!-- Pain Points -->
-                        <div class="flex flex-col gap-2 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
-                            <p class="font-bold">Pain Points:</p>
-                            <ul class="list-disc list-inside text-gray-400 space-y-2">
-                                <li>Struggles with long, complex forms and medical terms</li>
-                                <li>Connectivity issues during fieldwork</li>
-                                <li>Needs frequent reminders and offline save support</li>
-                            </ul>
-                        </div>
-            
-                        <!-- Needs from CHIP -->
-                        <div class="flex flex-col gap-2 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
-                            <p class="font-bold">Needs from CHIP:</p>
-                            <ul class="list-disc list-inside text-gray-400 space-y-2">
-                                <li>Simple, guided forms with skip logic</li>
-                                <li>Section-wise progress tracking</li>
-                                <li>Local language support and visual cues</li>
-                            </ul>
-                        </div>
-                    </div>
-    
-                    <p class="text-gray-400 mt-4">To maintain data integrity and workflow clarity, the app is governed by a <b class="text-gray-200">Role-Based Access Control (RBAC) System</b>, which ensures that each user only accesses relevant modules and permissions based on their designation and facility level.</p>
-                </div>
+            <div class="w-full mx-auto">
+                <img src="./images/chip/chip cover.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg shadow-md mt-4" />
             </div>
         </div>
+
+        <!-- Wireframes & Prototyping -->
+        <div class="flex flex-col gap-2">
+            <p class="text-xl font-bold mt-4">Wireframes & Prototyping</p>
+            <p class="text-gray-400 mt-2">To design CHIP for real-world usability, I created role-based personas that represent the distinct needs, behaviors, and constraints of users across different healthcare levels. These personas helped ensure that each interface was tailored, contextual, and respectful of users’ daily challenges.</p>
+
+            <div class="w-full mx-auto">
+                <img src="./images/chip/chip cover.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg shadow-md mt-4" />
+            </div>
+        </div>
+
+        <!-- Low-Fidelity Testing -->
+        <div class="flex flex-col gap-2">
+            <p class="text-xl font-bold mt-4">Wireframes & Prototyping</p>
+            <p class="text-gray-400 mt-2">I created early-stage wireframes for key flows and tested them in SHC/PHC settings. Based on quick feedback loops, I:</p>
+
+            <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                <li>Reduced cognitive load by adding <b class="text-gray-200">field-level tooltips</b></li>
+                <li>Added <b class="text-gray-200">auto-fill for repeated questions</b> in DHS</li>
+                <li>Introduced <b class="text-gray-200">color-coded modules</b> (e.g., green for IMR, blue for Family Planning)</li>
+                <li>Reorganized navigation into a <b class="text-gray-200">role-specific bottom nav bar</b></li>
+            </ul>
+
+            <div class="w-full mx-auto">
+                <img src="./images/chip/chip cover.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg shadow-md mt-4" />
+            </div>
+        </div>
+
+        <!-- Visual Design -->
+        <div class="flex flex-col gap-2">
+            <p class="text-xl font-bold mt-4">Visual Design</p>
+            <p class="text-gray-400 mt-2">To design CHIP for real-world usability, I created role-based personas that represent the distinct needs, behaviors, and constraints of users across different healthcare levels. These personas helped ensure that each interface was tailored, contextual, and respectful of users’ daily challenges.</p>
+
+            <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                <li><b class="text-gray-200">Color-coded modules</b> help distinguish workflows per role.</li>
+                <li><b class="text-gray-200">Icons + Labels</b> used to assist semi-literate users.</li>
+                <li>Responsive layout adapted to Android phones commonly used in the field.</li>
+            </ul>
+
+            <div class="w-full mx-auto">
+                <img src="./images/chip/chip cover.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg shadow-md mt-4" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="w-full flex items-center pt-3 pb-2 bg-gray-950 my-4">
+        <p class="font-bold">Thank you for your interest in my work!</p>
+        <p class="text-gray-400">Made by Sumit Nikhare.  © 2024 Sumit Nikhare</p>
     </div>
     
 

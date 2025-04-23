@@ -1,95 +1,228 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./src/output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+
+    <!--  -->
+    <style>
+    /* Add background animation */
+    @keyframes moveBg {
+        0% {
+        background-position: 0 0;
+        }
+        50% {
+        background-position: 0 10px;
+        }
+        100% {
+        background-position: 0 0;
+        }
+    }
+
+    .animated-bg {
+        animation: moveBg 5s ease-in-out infinite;
+    }
+
+    /* Transition for the navbar hide/show */
+    .navbar-transition {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-hidden {
+        transform: translateY(-100%);
+    }
+    </style>
 </head>
-<body class="bg-gray-950 py-12 px-16 text-gray-200">
 
-    <div class="flex flex-col gap-16">
+<body class="bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%220.5%22%20fill%3D%22%23444%22%20/%3E%3C/svg%3E')] bg-fixed bg-repeat bg-gray-950 text-gray-200 flex flex-col gap-8 lg:gap-12 animated-bg">
+    <!-- Floating Action Button -->
+    <!-- <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 bg-gray-800 hover:bg-gray-700 text-white hover:text-amber-300 p-4 rounded-full shadow-lg transition duration-300 z-50 opacity-0 pointer-events-none">
+        <svg class="col" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+    </button> -->
 
-        <!-- Top Bar -->
-        <div class="flex flex-col gap-4">
+    <!-- Top Bar -->
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-gray-950 text-white p-4 shadow-lg z-50 navbar-transition">
+        <div class="flex flex-col gap-3 justify-between items-center">
+            <h1 class="text-2xl font-medium">sumit.design</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                <li><a href="#" class="text-white hover:text-amber-500 py-2 transition duration-500 ease-in-out">About me</a></li>
+                <li><a href="#" class="text-white hover:text-amber-500 py-2 transition duration-500 ease-in-out">Projects</a></li>
+                <li><a href="#" class="text-white hover:text-amber-500 py-2 transition duration-500 ease-in-out">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-            <div>
-                <p class="text-4xl">sumit.</p>
+    <!-- Hero -->
+    <div class="flex flex-col gap-8 justify-center text-center h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <div>
+            <h1 class="text-6xl font-medium">Hi, I’m Sumit.</h1>
+            <h2 class="text-xl font-medium text-gray-400 mt-6">Product Designer | UX Designer | Design Anthusiast</h2>
+        </div>
+        
+        <!-- <div class="lg:w-4/5 mt-4 lg:mx-auto">
+            <img src="./images/chip/chip cover.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg lg:rounded-4xl" />
+        </div> -->
+        <p class="text-2xl font-normal ">I design user friendly digital spaces.</p>
+    </div>
+
+    <!-- Projects -->
+    <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <!-- Section Header -->
+        <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-2">
+                <p class="text-3xl font-bold">Projects</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
             </div>
-
-            <div class="flex flex-row gap-4">
-                <p><a href="#" class="hover:underline hover:underline-offset-2 hover:text-yellow-400">about me</a></p>
-                <p>projects</p>
-                <p>contact</p>
-            </div>
+            <p class="text-gray-400">CHIP V2.0 is a healthcare software developed by Khushi Baby NGO to digitize and manage public health operations at the last mile. The platform includes modules for Login, Attendance (Punch-IN), User Profiles, Digital Health Survey (DHS) Role-Based Access Control (RBAC), and critical health programs like ABHA linkage, Family Planning, and tracking Maternal and Infant Mortality (IMR/MMR).</p>
         </div>
 
-        <!-- Body -->
-        <div class="flex flex-col gap-4">
-            <p class="text-xl text-gray-300">Hi,</p>
-            <p class="text-4xl">I am Sumit Nikhare.</p>
-            <p class="text-xl text-gray-300">Product Designer | UX Designer | Design Anthusiast</p>
-            <p class="text-gray-400">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-        </div>
-
-        <hr class="border-gray-700">
-
-        <!-- Projects -->
-         <div class="flex flex-col gap-14">
-            <div>
-                <p class="text-4xl underline underline-offset-4">my work</p>
-            </div>
-
+        <!-- Khushibaby -->
+        <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-4">
                 <p class="text-xl underline underline-offset-4"> <a href="">Khushibaby</a></p>
                 <p class="text-gray-400">Sr. UI/UX Designer | Jan 23 - Present</p>
                 <p class="text-gray-400">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             </div>
 
-            <div class="flex flex-col gap-8">
-
-                <!-- Project =  -->
-                <div class="grid grid-cols-5 gap-8">
-                    <div class="col-span-3">
-                        <img src="https://wallpaperaccess.com/full/1940064.jpg" alt="Girl in a jacket" class="rounded-3xl">
+            <!-- Project"1 - CHIP 2.0 -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-4 lg:flex-row items-center">
+                    <!-- Left: Project Image -->
+                    <div class="w-1/2 w-full lg:order-1">
+                        <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                            <img src="./images/chip/chip cover.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </a>
                     </div>
-                    
-                    <div class="grid content-center gap-4 col-span-2">
-                        <p class="text-3xl">Community Health Integrated Platform</p>
-                        <p class="text-gray-400">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                        <p><a href="./chip.html" class="text-xl hover:underline hover:underline-offset-2 hover:text-yellow-400">View Details</a></p>
-                    </div>
-                </div>
-
-                <!-- Project =  -->
-                <div class="grid grid-cols-5 gap-8">
-                    <div class="col-span-3">
-                        <img src="https://wallpaperaccess.com/full/1940064.jpg" alt="Girl in a jacket" class="rounded-3xl">
-                    </div>
-                    
-                    <div class="grid content-center gap-4 col-span-2">
-                        <p class="text-3xl">Community Health Integrated Platform</p>
-                        <p class="text-gray-400">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                        <p><a href="./chip.html" class="text-xl hover:underline hover:underline-offset-2 hover:text-yellow-400">View Details</a></p>
+              
+                    <!-- Right: Text Content -->
+                    <div class="w-1/2 w-full flex flex-col gap-8 px-6 lg:order-2">
+                        <h3 class="text-2xl font-semibold">Login & Registration (RBAC Enabled)</h3>
+                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                        <button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">View Details</button>
                     </div>
                 </div>
-
-                <!-- Project =  -->
-                <div class="flex flex-col gap-4">
-                    <div>
-                        <img src="https://wallpaperaccess.com/full/1940064.jpg" alt="Girl in a jacket" class="rounded-3xl">
-                    </div>
-                    
-                    <div class="flex flex-col gap-4">
-                        <p class="text-3xl">Communittty Health Integrated Platform</p>
-                        <p class="text-gray-400">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                        <p><a href="#" class="text-xl hover:underline hover:underline-offset-2 hover:text-yellow-400">View Details</a></p>
-                    </div>
-                </div>
-
             </div>
 
-         </div>
+            <!-- Project"2 - GoK(Samasta) -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-4 lg:flex-row items-center">
+                    <!-- Left: Project Image -->
+                    <div class="w-1/2 w-full lg:order-2">
+                        <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                            <img src="./images/chip/chip cover.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </a>
+                    </div>
+              
+                    <!-- Right: Text Content -->
+                    <div class="w-1/2 w-full flex flex-col gap-8 px-6 lg:order-1">
+                        <h3 class="text-2xl font-semibold">Login & Registration (RBAC Enabled)</h3>
+                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                        <button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Permute Solutions Pvt. Ltd. -->
+        <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-4">
+                <p class="text-xl underline underline-offset-4"> <a href="">Permute Solutions Pvt. Ltd.</a></p>
+                <p class="text-gray-400">Associate UI/UX Designer | Jan 23 - Present</p>
+                <p class="text-gray-400">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+
+            <!-- Project"1 - CHIP 2.0 -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-4 lg:flex-row items-center">
+                    <!-- Left: Project Image -->
+                    <div class="w-1/2 w-full lg:order-1">
+                        <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                            <img src="./images/chip/chip cover.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </a>
+                    </div>
+              
+                    <!-- Right: Text Content -->
+                    <div class="w-1/2 w-full flex flex-col gap-8 px-6 lg:order-2">
+                        <h3 class="text-2xl font-semibold">Login & Registration (RBAC Enabled)</h3>
+                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                        <button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project"2 - GoK(Samasta) -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-4 lg:flex-row items-center">
+                    <!-- Left: Project Image -->
+                    <div class="w-1/2 w-full lg:order-2">
+                        <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                            <img src="./images/chip/chip cover.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </a>
+                    </div>
+              
+                    <!-- Right: Text Content -->
+                    <div class="w-1/2 w-full flex flex-col gap-8 px-6 lg:order-1">
+                        <h3 class="text-2xl font-semibold">Login & Registration (RBAC Enabled)</h3>
+                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                        <button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </div>
+
+    <!-- Contact me -->
+    <div class="w-full flex flex-col gap-4 items-center py-16 mt-8">
+        <p class="text-6xl font-semibold">Interested in collaboration?</p>
+        <p class="text-2xl mt-4">Let's discuss what we can create together.</p>
+        <button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max mt-2">Say Hello!!!</button>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="w-full flex flex-col gap-2 items-center py-16 bg-gray-950 mt-8">
+        <div class="flex flex-col text-center">
+            <p class="text-xl font-semibold m-2">Thank you for your interest in my work!</p>
+            <p class="m-2">Thank you for your interest in my work!</p>
+            
+        </div>
+        <p class="text-gray-400 m-2">Made by Sumit Nikhare.  © 2024 Sumit Nikhare</p>
+    </div>
+
+    <!-- JS -->
+    <script>
+        const fab = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            fab.classList.remove('opacity-0', 'pointer-events-none');
+          } else {
+            fab.classList.add('opacity-0', 'pointer-events-none');
+          }
+        });
+
+        // Hiding and showing the navbar on scroll
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function () {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            navbar.classList.add('navbar-hidden');
+        } else {
+            // Scrolling up
+            navbar.classList.remove('navbar-hidden');
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+        });
+    </script>
+      
+    
+
 </body>
 </html>

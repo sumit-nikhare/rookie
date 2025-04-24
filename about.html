@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+
+    <!--  -->
+    <style>
+    /* Add background animation */
+    @keyframes moveBg {
+        0% {
+        background-position: 0 0;
+        }
+        50% {
+        background-position: 0 10px;
+        }
+        100% {
+        background-position: 0 0;
+        }
+    }
+
+    .animated-bg {
+        animation: moveBg 5s ease-in-out infinite;
+    }
+
+    /* Transition for the navbar hide/show */
+    .navbar-transition {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-hidden {
+        transform: translateY(-100%);
+    }
+    </style>
+</head>
+
+<body class="bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%220.5%22%20fill%3D%22%23444%22%20/%3E%3C/svg%3E')] bg-fixed bg-repeat bg-gray-950 text-gray-200 flex flex-col gap-8 lg:gap-12 animated-bg">
+    <!-- Floating Action Button -->
+    <!-- <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 bg-gray-800 hover:bg-gray-700 text-white hover:text-amber-300 p-4 rounded-full shadow-lg transition duration-300 z-50 opacity-0 pointer-events-none">
+        <svg class="col" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+    </button> -->
+
+    <!-- Top Bar -->
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-gray-950 text-white p-4 shadow-lg z-50 navbar-transition">
+        <div class="flex flex-col gap-3 justify-between items-center">
+            <h1 class="text-2xl font-medium">sumit.design</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                <li><a href="#" class="text-white hover:text-amber-500 py-2 transition duration-500 ease-in-out">About me</a></li>
+                <li><a href="#" class="text-white hover:text-amber-500 py-2 transition duration-500 ease-in-out">Projects</a></li>
+                <li><a href="#" class="text-white hover:text-amber-500 py-2 transition duration-500 ease-in-out">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="flex flex-col gap-8 justify-center items-center text-center h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <div>
+            <h1 class="text-6xl font-medium">Get to know more about me.</h1>
+            <h2 class="font-light text-gray-400 mt-10">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</h2>
+        </div>
+        
+        <button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">Resume</button>
+    </div>
+
+    <!-- Skills -->
+    <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <!-- Section Header -->
+        <div class="flex flex-col gap-8 justify-center items-center">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-3xl font-bold">Skills</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+
+            <p class="text-gray-400 text-center">CHIP V2.0 is a healthcare software developed by Khushi Baby NGO to digitize and manage public health operations at the last mile. The platform includes modules for Login, Attendance (Punch-IN), User Profiles, Digital Health Survey (DHS) Role-Based Access Control (RBAC), and critical health programs like ABHA linkage, Family Planning, and tracking Maternal and Infant Mortality (IMR/MMR).</p>
+
+            <div class="flex flex-wrap gap-2 items-center text-center justify-center">
+                <span class="py-4 px-8 bg-gray-800 rounded-full">UX Research</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Wireframing</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">UX Strategy</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Branding</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Visual Design</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Typography</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Motion Design</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Project Management</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Video Editing</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <!-- Section Header -->
+        <div class="flex flex-col gap-8 justify-center items-center">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-3xl font-bold">Education</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+
+            <p class="text-gray-400 text-center">CHIP V2.0 is a healthcare software developed by Khushi Baby NGO to digitize and manage public health operations at the last mile. The platform includes modules for Login, Attendance (Punch-IN), User Profiles, Digital Health Survey (DHS) Role-Based Access Control (RBAC), and critical health programs like ABHA linkage, Family Planning, and tracking Maternal and Infant Mortality (IMR/MMR).</p>
+
+            <div class="flex flex-wrap gap-2 items-center text-center justify-center">
+                <div class="bg-gray-800">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aside from design ... -->
+    <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <!-- Section Header -->
+        <div class="flex flex-col gap-8 justify-center items-center">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-3xl font-bold">Aside from design...</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+
+            <p class="text-gray-400 text-center">When I'm not at my desk, you'll find me diving into the ocean, running marathons, and traveling the world.</p>
+        </div>
+    </div>
+
+    <!-- Contact me -->
+    <div class="w-full flex flex-col gap-4 items-center py-16 mt-8">
+        <p class="text-6xl font-semibold text-center">Interested in collaboration?</p>
+        <p class="text-2xl mt-4 text-center">Let's discuss what we can create together.</p>
+        <button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max mt-2">Let's Connect!!!</button>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="w-full flex flex-col gap-2 items-center py-16 bg-gray-950 mt-8">
+        <div class="flex flex-col text-center">
+            <p class="text-xl font-semibold m-2">Thanks for stopping by!</p>
+            <p class="m-2">Thank you for your interest in my work!</p>
+            
+        </div>
+        <p class="text-gray-400 m-2">Made by Sumit Nikhare.  © 2024 Sumit Nikhare</p>
+    </div>
+
+    <!-- JS -->
+    <script>
+        const fab = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            fab.classList.remove('opacity-0', 'pointer-events-none');
+          } else {
+            fab.classList.add('opacity-0', 'pointer-events-none');
+          }
+        });
+
+        // Hiding and showing the navbar on scroll
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function () {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            navbar.classList.add('navbar-hidden');
+        } else {
+            // Scrolling up
+            navbar.classList.remove('navbar-hidden');
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+        });
+    </script>
+      
+    
+
+</body>
+</html>

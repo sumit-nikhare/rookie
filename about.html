@@ -32,6 +32,28 @@
     .navbar-hidden {
         transform: translateY(-100%);
     }
+
+    /* for role animation */
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; }
+      10%, 30% { opacity: 1; }
+      40%, 100% { opacity: 0; }
+    }
+
+    .fade-text-1 {
+      animation: fadeInOut 9s infinite;
+      animation-delay: 0s;
+    }
+
+    .fade-text-2 {
+      animation: fadeInOut 9s infinite;
+      animation-delay: 3s;
+    }
+
+    .fade-text-3 {
+      animation: fadeInOut 9s infinite;
+      animation-delay: 6s;
+    }
     </style>
 </head>
 

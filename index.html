@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!--  -->
     <style>
@@ -32,6 +33,34 @@
     .navbar-hidden {
         transform: translateY(-100%);
     }
+
+    /* for role animation */
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; }
+      10%, 30% { opacity: 1; }
+      40%, 100% { opacity: 0; }
+    }
+
+    .fade-text-1 {
+      animation: fadeInOut 9s infinite;
+      animation-delay: 0s;
+    }
+
+    .fade-text-2 {
+      animation: fadeInOut 9s infinite;
+      animation-delay: 3s;
+    }
+
+    .fade-text-3 {
+      animation: fadeInOut 9s infinite;
+      animation-delay: 6s;
+    }
+
+    @keyframes drawUnderline {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
     </style>
 </head>
 
@@ -47,7 +76,7 @@
             <h1 class="text-2xl font-medium">sumit.design</h1>
             <nav>
                 <ul class="flex space-x-6">
-                <li><a href="#" class="text-white hover:text-amber-500 py-2 transition duration-500 ease-in-out">About me</a></li>
+                <li><a href="./about.html" class="text-white hover:text-amber-500 py-2 transition duration-500 ease-in-out">About me</a></li>
                 <li><a href="#" class="text-white hover:text-amber-500 py-2 transition duration-500 ease-in-out">Projects</a></li>
                 <li><a href="#" class="text-white hover:text-amber-500 py-2 transition duration-500 ease-in-out">Contact</a></li>
                 </ul>
@@ -56,16 +85,31 @@
     </header>
 
     <!-- Hero -->
-    <div class="flex flex-col gap-8 justify-center text-center h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0">
+    <div class="flex flex-col gap-8 justify-center items-center text-center h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0">
         <div>
-            <h1 class="text-6xl font-medium">Hi, I’m Sumit.</h1>
-            <h2 class="text-xl font-medium text-gray-400 mt-6">Product Designer | UX Designer | Design Anthusiast</h2>
+            <h1 class="text-4xl font-medium">Hi, I’m 
+                <span class="inline-block text-amber-300 relative pb-3">
+                    <span class="relative z-10">Sumit.</span>
+                    <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="absolute bottom-0 left-0 w-full h-3 z-0">
+                      <path d="M0,5 Q50,0 100,5" fill="none" stroke="#fcd34d" stroke-width="3"
+                        stroke-dasharray="100"
+                        stroke-dashoffset="100"
+                        style="animation: drawUnderline 1s ease forwards;"></path>
+                    </svg>
+                </span>
+            </h1>
+
+            <div class="relative w-full max-w-xl text-center text-xl font-medium text-gray-300 mt-6">
+                <div class="absolute inset-0 opacity-0 fade-text-1">Product Designer</div>
+                <div class="absolute inset-0 opacity-0 fade-text-2">UX/UI Designer</div>
+                <div class="absolute inset-0 opacity-0 fade-text-3">Design Anthusiast</div>
+            </div>
         </div>
         
         <!-- <div class="lg:w-4/5 mt-4 lg:mx-auto">
             <img src="./images/chip/chip cover.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg lg:rounded-4xl" />
         </div> -->
-        <p class="text-2xl font-normal ">I design user friendly digital spaces.</p>
+        <p class="text-xl font-normal text-gray-400 mt-8 lg:w-3/5">I design user friendly digital spaces. Seamlessly Integrating User Experiences with Impactful Brand Identity Design.</p>
     </div>
 
     <!-- Projects -->
@@ -82,7 +126,7 @@
         <!-- Khushibaby -->
         <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-4">
-                <p class="text-xl underline underline-offset-4"> <a href="">Khushibaby</a></p>
+                <p class="text-xl underline underline-offset-4"> <a href="https://www.khushibaby.org">Khushibaby</a></p>
                 <p class="text-gray-400">Sr. UI/UX Designer | Jan 23 - Present</p>
                 <p class="text-gray-400">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             </div>

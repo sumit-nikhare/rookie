@@ -32,6 +32,12 @@
     .navbar-hidden {
         transform: translateY(-100%);
     }
+
+    @keyframes drawUnderline {
+    to {
+        stroke-dashoffset: 0;
+        }
+    }
     </style>
 </head>
 
@@ -44,10 +50,10 @@
     <!-- Top Bar -->
     <header id="navbar" class="fixed top-0 left-0 w-full bg-gray-950 text-white p-4 shadow-lg z-50 navbar-transition">
         <div class="flex flex-col gap-3 justify-between items-center">
-            <h1 class="text-2xl font-medium">sumit.design</h1>
+            <h1 class="text-2xl font-medium"><a href="./index.html" class="text-white hover:text-amber-300 py-2">sumit.design</a></h1>
             <nav>
                 <ul class="flex space-x-6">
-                <li><a href="#" class="text-white hover:text-amber-500 py-2">About me</a></li>
+                <li><a href="#" class="text-white hover:text-amber-300 py-2">About me</a></li>
                 <li><a href="#" class="text-white hover:text-amber-500 py-2">Projects</a></li>
                 <li><a href="#" class="text-white hover:text-amber-500 py-2">Contact</a></li>
                 </ul>
@@ -91,7 +97,7 @@
         <!-- Section Header -->
         <div class="flex flex-col items-center gap-8">
             <div class="flex flex-col gap-2 items-center">
-                <p class="text-2xl font-bold">Project Overview</p>
+                <p class="text-2xl font-bold">Role & Responsibilities</p>
                 <div class="border-b-4 border-yellow-400 w-16"></div>
             </div>
             <p class="text-gray-400 text-center lg:w-4/5">CHIP V2.0 is a healthcare software developed by Khushi Baby NGO to digitize and manage public health operations at the last mile. The platform includes modules for Login, Attendance (Punch-IN), User Profiles, Digital Health Survey (DHS) Role-Based Access Control (RBAC), and critical health programs like ABHA linkage, Family Planning, and tracking Maternal and Infant Mortality (IMR/MMR).</p>

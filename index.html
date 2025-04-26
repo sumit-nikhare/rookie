@@ -132,20 +132,23 @@
             </div>
 
             <!-- Project"1 - CHIP 2.0 -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-3 lg:p-6 ">
                 <div class="flex flex-col gap-4 lg:flex-row items-center">
                     <!-- Left: Project Image -->
                     <div class="w-1/2 w-full lg:order-1">
                         <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-                            <img src="./images/chip/chip cover.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                            <img src="./images/tarp/tarp_thumbnail.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
                         </a>
                     </div>
               
                     <!-- Right: Text Content -->
-                    <div class="w-1/2 w-full flex flex-col gap-8 px-6 lg:order-2">
-                        <h3 class="text-2xl font-semibold">Login & Registration (RBAC Enabled)</h3>
-                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
-                        <button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">View Details</button>
+                    <div class="w-1/2 w-full flex flex-col gap-3 lg:gap-8 lg:px-6 lg:order-2">
+                        <h3 class="text-2xl font-semibold">Community Health Integrated Platform (CHIP) 2.0</h3>
+                        <p class="text-gray-400">The Community Health Integrated Platform (CHIP) is an Android app for ASHA workers and ANMs, designed to streamline health record management and reduce paper dependency. I contributed to enhancing the Khushi Baby health app by integrating features like RMNCH+A coverage and ABHA integration. User research guided the interface design, ensuring it met healthcare workers' needs. Continuous testing confirmed that the app effectively improves maternal and child health outcomes in underserved areas.</p>
+                        <a href="./project-1.html">
+                            <button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">View Details</button>
+                        </a>
+                        
                     </div>
                 </div>
             </div>
@@ -221,9 +224,19 @@
     </div>
 
     <!-- Contact me -->
-    <div class="w-full flex flex-col gap-4 items-center py-16 mt-8">
-        <p class="text-6xl font-semibold text-center">Interested in collaboration?</p>
-        <p class="text-2xl mt-4 text-center">Let's discuss what we can create together.</p>
+    <div class="flex flex-col gap-2 justify-center items-center text-center h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <p class="text-4xl font-semibold text-center">Interested in 
+            <span class="inline-block text-amber-300 relative pb-3">
+                <span class="relative z-10">collaboration?</span>
+                <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="absolute bottom-0 left-0 w-full h-3 z-0">
+                  <path d="M0,5 Q50,0 100,5" fill="none" stroke="#fcd34d" stroke-width="3"
+                    stroke-dasharray="100"
+                    stroke-dashoffset="100"
+                    style="animation: drawUnderline 1s ease forwards;"></path>
+                </svg>
+            </span>
+        </p>
+        <p class="text-xl mt-4 text-center">Let's discuss what we can create together.</p>
         <button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max mt-2">Let's Connect!!!</button>
     </div>
 

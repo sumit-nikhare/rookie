@@ -97,7 +97,7 @@
         <!-- Section Header -->
         <div class="flex flex-col items-center gap-8">
             <div class="flex flex-col gap-2 items-center">
-                <p class="text-2xl font-bold">Role & Responsibilities</p>
+                <p class="text-2xl font-bold">Project Overview</p>
                 <div class="border-b-4 border-yellow-400 w-16"></div>
             </div>
             <p class="text-gray-400 text-center lg:w-4/5">CHIP V2.0 is a healthcare software developed by Khushi Baby NGO to digitize and manage public health operations at the last mile. The platform includes modules for Login, Attendance (Punch-IN), User Profiles, Digital Health Survey (DHS) Role-Based Access Control (RBAC), and critical health programs like ABHA linkage, Family Planning, and tracking Maternal and Infant Mortality (IMR/MMR).</p>
@@ -794,7 +794,7 @@
     <hr class="border-t-2 border-gray-700 mx-4 lg:w-3/5 lg:mx-auto">
 
     <!-- Final Solution -->
-    <div class="flex flex-col gap-6 px-4">
+    <div class="flex flex-col gap-8 px-4">
 
         <!-- Section Header -->
         <div class="flex flex-col items-center gap-8 lg:w-3/5 lg:m-auto lg:px-0">
@@ -819,13 +819,13 @@
         </div>
 
         <!-- UI Designs - section wise -->
-        <div class="grid grid-cols-1 gap-8 lg:w-4/5 lg:m-auto lg:px-0">
+        <div class="grid grid-cols-1 gap-8 lg:w-3/5 lg:m-auto lg:px-0">
 
             <!-- Login & Registration (RBAC Enabled) -->
             <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-2">
-                        <h3 class="text-2xl font-semibold">Login & Registration (RBAC Enabled)</h3>
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Login & Registration (RBAC Enabled)</h3>
                         <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
                     </div>
 
@@ -863,50 +863,431 @@
                 </div>
             </div>
 
-            <!-- Login & Registration (RBAC Enabled) -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
-                <div class="flex flex-col gap-4">
-                    <div class="flex flex-col gap-3">
-                        <h3 class="text-2xl font-semibold">Login & Registration (RBAC Enabled)</h3>
+            <!-- Punch-IN / Punch-OUT System -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Punch-IN / Punch-OUT System</h3>
                         <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
                     </div>
 
                     <div class="flex flex-col gap-4 lg:flex-row items-center">
                       <!-- Left: Project Image -->
-                      <div class="w-1/2 w-full lg:order-2">
-                        <img src="./images/chip/chip cover.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        <div class="w-1/2 lg:w-3/5 w-full lg:order-2">
+                            <img src="./images/chip2/feature_2_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
                         </div>
                 
                       <!-- Right: Text Content -->
-                        <div class="w-1/2 w-full flex flex-col gap-8 px-6 pt-6 lg:order-1">
+                        <div class="w-1/2 lg:w-2/5 w-full flex flex-col gap-6 lg:gap-8 px-2 lg:px-6 lg:order-1">
 
                             <div>
-                                <p class="font-bold">Login & Registration (RBAC Enabled)</p>
+                                <p class="font-medium text-xl">Key Features:</p>
                                 <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
-                                    <li>Validate the clarity of workflows for each module (DHS, FP, Punch-IN, etc.)</li>
-                                    <li>Identify pain points in navigation, language comprehension, and data entry</li>
-                                    <li>Measure task completion time and error rates</li>
-                                    <li>Ensure offline functionality behaves as expected in remote settings</li>
-                                    <li>Gather user sentiment and feedback on visual hierarchy and interactions</li>
+                                    <li>Geo-tagged time logging</li>
+                                    <li>Offline caching with sync retry</li>
+                                    <li>Visual feedback with status history</li>
                                 </ul>
                             </div>
 
                             <hr class="border-t-2 border-gray-700">
 
                             <div>
-                                <p class="font-bold">Login & Registration (RBAC Enabled)</p>
+                                <p class="font-medium text-xl">Benefits:</p>
                                 <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
-                                    <li>Validate the clarity of workflows for each module (DHS, FP, Punch-IN, etc.)</li>
-                                    <li>Identify pain points in navigation, language comprehension, and data entry</li>
-                                    <li>Measure task completion time and error rates</li>
-                                    <li>Ensure offline functionality behaves as expected in remote settings</li>
-                                    <li>Gather user sentiment and feedback on visual hierarchy and interactions</li>
+                                    <li>Improves accountability and transparency of field visits</li>
+                                    <li>Enables supervisors to track staff presence in real time</li>
+                                    <li>Works reliably in low-network zones</li>
                                 </ul>
                             </div>
 
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Digital Health Survey (DHS) -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Digital Health Survey (DHS)</h3>
+                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-4 lg:flex-row items-center">
+                      <!-- Left: Project Image -->
+                        <div class="w-1/2 lg:w-3/5 w-full lg:order-1">
+                            <img src="./images/chip2/feature_1_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                
+                      <!-- Right: Text Content -->
+                        <div class="w-1/2 lg:w-2/5 w-full flex flex-col gap-6 lg:gap-8 px-2 lg:px-6 lg:order-2">
+
+                            <div>
+                                <p class="font-medium text-xl">Key Features:</p>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                                    <li>Modular guided form with skip logic</li>
+                                    <li>Autosave and sync queue for offline mode</li>
+                                    <li>Support for household, maternal, child, and facility sections</li>
+                                </ul>
+                            </div>
+
+                            <hr class="border-t-2 border-gray-700">
+
+                            <div>
+                                <p class="font-medium text-xl">Benefits:</p>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                                    <li>Standardizes field data collection across health themes</li>
+                                    <li>Minimizes errors with validation and visual sectioning</li>
+                                    <li>Saves time by reusing previously captured data</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABHA ID Integration -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">ABHA ID Integration</h3>
+                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-4 lg:flex-row items-center">
+                      <!-- Left: Project Image -->
+                        <div class="w-1/2 lg:w-3/5 w-full lg:order-2">
+                            <img src="./images/chip2/feature_2_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                
+                      <!-- Right: Text Content -->
+                        <div class="w-1/2 lg:w-2/5 w-full flex flex-col gap-6 lg:gap-8 px-2 lg:px-6 lg:order-1">
+
+                            <div>
+                                <p class="font-medium text-xl">Key Features:</p>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                                    <li>Optional linking during registration or from profile</li>
+                                    <li>Step-by-step flow with guided tooltips</li>
+                                    <li>ABHA fetch via Aadhaar or mobile</li>
+                                </ul>
+                            </div>
+
+                            <hr class="border-t-2 border-gray-700">
+
+                            <div>
+                                <p class="font-medium text-xl">Benefits:</p>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                                    <li>Integrates health records with national health stack</li>
+                                    <li>Promotes interoperability</li>
+                                    <li>Flexible enough to avoid friction during time-sensitive workflows</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Family Planning (FP) Module -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Family Planning (FP) Module</h3>
+                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-4 lg:flex-row items-center">
+                      <!-- Left: Project Image -->
+                        <div class="w-1/2 lg:w-3/5 w-full lg:order-1">
+                            <img src="./images/chip2/feature_5_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                
+                      <!-- Right: Text Content -->
+                        <div class="w-1/2 lg:w-2/5 w-full flex flex-col gap-6 lg:gap-8 px-2 lg:px-6 lg:order-2">
+
+                            <div>
+                                <p class="font-medium text-xl">Key Features:</p>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                                    <li>Selection of FP methods with visual options</li>
+                                    <li>Timeline of FP history per beneficiary</li>
+                                    <li>Auto-reminders for follow-up and resupply</li>
+                                </ul>
+                            </div>
+
+                            <hr class="border-t-2 border-gray-700">
+
+                            <div>
+                                <p class="font-medium text-xl">Benefits:</p>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                                    <li>Empowers ASHAs to track continuity in contraceptive use</li>
+                                    <li>Supports proactive counseling and resupply</li>
+                                    <li>Reduces dropout through better visibility and reminders</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sickle Cell Module -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">ABHA ID Integration</h3>
+                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-4 lg:flex-row items-center">
+                      <!-- Left: Project Image -->
+                        <div class="w-1/2 lg:w-3/5 w-full lg:order-2">
+                            <img src="./images/chip2/feature_2_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                
+                      <!-- Right: Text Content -->
+                        <div class="w-1/2 lg:w-2/5 w-full flex flex-col gap-6 lg:gap-8 px-2 lg:px-6 lg:order-1">
+
+                            <div>
+                                <p class="font-medium text-xl">Key Features:</p>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                                    <li>Optional linking during registration or from profile</li>
+                                    <li>Step-by-step flow with guided tooltips</li>
+                                    <li>ABHA fetch via Aadhaar or mobile</li>
+                                </ul>
+                            </div>
+
+                            <hr class="border-t-2 border-gray-700">
+
+                            <div>
+                                <p class="font-medium text-xl">Benefits:</p>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                                    <li>Integrates health records with national health stack</li>
+                                    <li>Promotes interoperability</li>
+                                    <li>Flexible enough to avoid friction during time-sensitive workflows</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile – Facility, Geography & User -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Profile – Facility, Geography & User</h3>
+                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-4 lg:flex-row items-center">
+                      <!-- Left: Project Image -->
+                        <div class="w-1/2 lg:w-3/5 w-full lg:order-1">
+                            <img src="./images/chip2/feature_7_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                
+                      <!-- Right: Text Content -->
+                        <div class="w-1/2 lg:w-2/5 w-full flex flex-col gap-6 lg:gap-8 px-2 lg:px-6 lg:order-2">
+
+                            <div>
+                                <p class="font-medium text-xl">Key Features:</p>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                                    <li>Editable role-based profile</li>
+                                    <li>QR scan to map to facility</li>
+                                    <li>Multi-role login support (for supervisors)</li>
+                                </ul>
+                            </div>
+
+                            <hr class="border-t-2 border-gray-700">
+
+                            <div>
+                                <p class="font-medium text-xl">Benefits:</p>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                                    <li>Ensures accurate user-facility mapping</li>
+                                    <li>Simplifies the app for rotating staff</li>
+                                    <li>Supports audit trails and reporting by geography</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Role-Based Homepages -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Role-Based Homepages</h3>
+                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-4 lg:flex-row items-center">
+                      <!-- Left: Project Image -->
+                        <div class="w-1/2 lg:w-3/5 w-full lg:order-2">
+                            <img src="./images/chip2/feature_8_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                
+                      <!-- Right: Text Content -->
+                        <div class="w-1/2 lg:w-2/5 w-full flex flex-col gap-6 lg:gap-8 px-2 lg:px-6 lg:order-1">
+
+                            <div>
+                                <p class="font-medium text-xl">Key Features:</p>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                                    <li>Dynamic dashboard per role (ASHA, ANM, CHO, MO, etc.)</li>
+                                    <li>Pending tasks, alerts, sync status display</li>
+                                    <li>Smart shortcuts for daily workflows</li>
+                                </ul>
+                            </div>
+
+                            <hr class="border-t-2 border-gray-700">
+
+                            <div>
+                                <p class="font-medium text-xl">Benefits:</p>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                                    <li>Reduces cognitive overload by showing only what’s needed</li>
+                                    <li>Helps users focus on high-priority tasks</li>
+                                    <li>Encourages consistent usage through intuitive layout</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary of System-Wide Benefits -->
+        <div class="flex flex-col gap-4 lg:w-3/5 lg:m-auto lg:px-0">
+            <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-2">
+                    <p class="text-xl font-bold">Summary of System-Wide Benefits</p>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto">
+                <div class="border border-gray-300 rounded-2xl shadow-sm overflow-hidden">
+                  <table class="min-w-full border-collapse">
+                    <thead>
+                      <tr class="bg-gray-100">
+                        <th class="text-left p-4 text-gray-700 font-semibold text-lg border-b">Feature</th>
+                        <th class="text-left p-4 text-gray-700 font-semibold text-lg border-b">Description</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-gray-400 text-base">
+                      <tr class="border-b">
+                        <td class="p-4">Usability</td>
+                        <td class="p-4">Designed for low-literacy, first-time digital users</td>
+                      </tr>
+                      <tr class="border-b">
+                        <td class="p-4">Offline Support</td>
+                        <td class="p-4">All critical functions work offline with smart sync handling</td>
+                      </tr>
+                      <tr class="border-b">
+                        <td class="p-4">Security & Access</td>
+                        <td class="p-4">Fine-grained control through RBAC</td>
+                      </tr>
+                      <tr class="border-b">
+                        <td class="p-4">Data Quality</td>
+                        <td class="p-4">Real-time validation, skip logic, and progressive save enhance accuracy</td>
+                      </tr>
+                      <tr>
+                        <td class="p-4">Scalability</td>
+                        <td class="p-4">Modules designed to plug-and-play across health programs and states</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+              
+        </div>
+
+        <!-- Technical & Accessibility Considerations -->
+        <div class="flex flex-col gap-4 lg:w-3/5 lg:m-auto lg:px-0">
+            <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-2">
+                    <p class="text-xl font-bold">Technical & Accessibility Considerations</p>
+                </div>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 m1-4">
+                    <li>Homepage and navigation auto-adjust based on the user's role and facility level.</li>
+                    <li>Punch-IN reflects GPS and timestamp clearly.</li>
+                    <li>RBAC implemented via user profile at login and governed across UI components.</li>
+                </ul>
+            </div>
+        </div>
+        
+          
+    </div>
+
+    <hr class="border-t-2 border-gray-700 mx-4 lg:w-3/5 lg:mx-auto">
+
+    <!-- Impact & Results -->
+    <div class="flex flex-col gap-6 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Impact & Results</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8">
+            <!-- Objectives -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <img src="./images/chip2/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                <p class="text-xl font-bold">Outcomes</p>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                    <li>3x reduction in training issues for new users</li>
+                    <li>Increased compliance with ABHA linkage and family planning tracking</li>
+                    <li>Streamlined module access prevented data duplication and errors</li>
+                </ul>
+            </div>
+
+            <!-- Participants -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <img src="./images/chip2/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                <p class="text-xl font-bold">Lessons Learned</p>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                    <li>RBAC is not just a backend concept—it deeply affects UX clarity</li>
+                    <li>Simpler interfaces = higher field adoption</li>
+                    <li>Field testing is essential, especially in multi-tiered systems</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border-t-2 border-gray-700 mx-4 lg:w-3/5 lg:mx-auto">
+
+    <!-- Conclusion -->
+    <div class="flex flex-col gap-6 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Conclusion</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8">
+            <!-- Project Reflection -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <img src="./images/chip2/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                <p class="text-xl font-bold">Project Reflection</p>
+                <p class="text-gray-400">Designing for CHIP required creating a flexible-yet-controlled system that serves multiple user levels without overwhelming any of them. Understanding the working styles of ASHAs, ANMs, and MOs was key to building trust and usability into the app.</p>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <img src="./images/chip2/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                <p class="text-xl font-bold">Next Steps</p>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                    <li>Introduce visual analytics for MO dashboard</li>
+                    <li>Allow CHOs to flag referrals via SHC interface</li>
+                    <li>Expand RBAC to outreach and inventory modules</li>
+                </ul>
             </div>
         </div>
     </div>

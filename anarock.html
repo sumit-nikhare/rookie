@@ -1,0 +1,486 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+
+    <!--  -->
+    <style>
+    /* Add background animation */
+    @keyframes moveBg {
+        0% {
+        background-position: 0 0;
+        }
+        50% {
+        background-position: 0 10px;
+        }
+        100% {
+        background-position: 0 0;
+        }
+    }
+
+    .animated-bg {
+        animation: moveBg 5s ease-in-out infinite;
+    }
+
+    /* Transition for the navbar hide/show */
+    .navbar-transition {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-hidden {
+        transform: translateY(-100%);
+    }
+
+    @keyframes drawUnderline {
+    to {
+        stroke-dashoffset: 0;
+        }
+    }
+    </style>
+</head>
+
+<body class="bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%220.5%22%20fill%3D%22%23444%22%20/%3E%3C/svg%3E')] bg-fixed bg-repeat bg-gray-950 text-gray-200 flex flex-col gap-8 lg:gap-12 animated-bg">
+
+    <!-- Floating Action Button -->
+    <!-- <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 bg-gray-800 hover:bg-gray-700 text-white hover:text-amber-300 p-4 rounded-full shadow-lg transition duration-300 z-50 opacity-0 pointer-events-none">
+        <svg class="col" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+    </button> -->
+
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
+    class="fixed bottom-6 right-6 bg-gray-800 hover:bg-gray-700 text-white hover:text-amber-300 p-4 rounded-full shadow-lg transition duration-300 z-50 opacity-0 pointer-events-none group">
+    
+        <svg class="w-7 h-7 fill-current transition duration-300 group-hover:fill-amber-300" 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" 
+            fill="white">
+        <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
+        </svg>
+
+    </button>
+
+
+
+    <!-- Top Bar -->
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-gray-950 text-white p-4 shadow-lg z-50 navbar-transition">
+        <div class="flex flex-col gap-3 justify-between items-center">
+            <h1 class="text-2xl font-medium"><a href="./index.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">sumit.design</a></h1>
+            <nav>
+                <ul class="flex space-x-6">
+                <li><a href="./about.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">About me</a></li>
+                <li><a href="#" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Projects</a></li>
+                <li><a href="mailto:workspcae0105@gmai.com" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Hero -->
+    <div class="flex flex-col justify-center text-center h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <div>
+            <h1 class="text-3xl font-bold">Anarock Channel Partner Application</h1>
+            <h2 class="text-lg text-gray-400 mt-4">Streamlining Healthcare Operations at the Grassroots.</h2>
+        </div>
+        
+        <div class="lg:w-5/5 mt-4 lg:mx-auto">
+            <img src="./images/anarock/anarock_cover.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg lg:rounded-4xl" />
+        </div>
+    </div>
+
+
+    <!-- Project Overview -->
+    <div class="flex flex-col gap-6 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Project Overview</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+            <p class="text-gray-400 text-center lg:w-4/5">The goal was to design a mobile application for Health and Wellness Centre (HWC) doctors and staff in Karnataka to manage Outpatient Department (OPD) services efficiently. The app aimed to streamline patient registration, appointment scheduling, EMR management, telemedicine, health monitoring, inventory management, outreach activities, and provide a dashboard for higher officials.</p>
+        </div>
+
+        <!--  -->
+        <div class="flex flex-col gap-8 lg:flex-row bg-gray-900 rounded-3xl p-6 mx-4">
+            <div class="flex flex-col items-center w-full">
+                <p class="text-xl font-bold text-center">Project type: End-to-end app + branding</p>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="flex flex-col gap-8 lg:flex-row bg-gray-900 rounded-3xl p-6 mx-4">
+            <div class="flex flex-col items-center w-full">
+                <img src="./images/chip2/icons/industry.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                <p class="text-gray-400 text-center lg:w-4/5">Industry</p>
+                <p class="font-bold text-center mt-2">Public Health Digitalisation</p>
+            </div>
+
+            <div class="flex flex-col items-center w-full">
+                <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                <p class="text-gray-400 text-center lg:w-4/5">Tools</p>
+                <p class="font-bold text-center mt-2">Figma, FigJam, Jira, Confluence & Google Meet</p>
+            </div>
+
+            <div class="flex flex-col items-center w-full">
+                <img src="./images/chip2/icons/duration.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                <p class="text-gray-400 text-center lg:w-4/5">Duration</p>
+                <p class="font-bold text-center mt-2">Q3 2023</p>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="border-t-2 border-gray-800 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+    
+    <!-- Role & Responsibilities -->
+    <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <!-- Section Header -->
+        <div class="flex flex-col gap-8 justify-center items-center">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-3xl font-bold">Roles and Responsibilities</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+
+            <p class="text-gray-400 text-center">Led the entire design process across modules and user levels—translating complex workflows into intuitive, role-sensitive experiences.</p>
+
+            <div class="flex flex-wrap gap-2 items-center text-center justify-center">
+                <span class="py-4 px-8 bg-gray-800 rounded-full">UX Research</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Wireframing</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">UX Strategy</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Branding</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Visual Design</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Typography</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Motion Design</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Project Management</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Video Editing</span>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+
+    <!-- Problem Statement -->
+    <div class="flex flex-col gap-6 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Problem Statement</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+            <p class="text-gray-400 text-center lg:w-4/5">Led the entire design process across modules and user levels—translating complex workflows into intuitive, role-sensitive experiences.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4">
+            <!-- Context & Background -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <img src="./images/chip2/icons/context.svg" alt="Logo" class="w-12 h-auto"/>
+                <p class="text-xl font-bold mt-4">Context & Background</p>
+                <p class="text-gray-400 mt-4">CHIP is accessed by healthcare workers across a <b class="text-gray-200">three-tiered hierarchy:</b></p>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                <li><b class="text-gray-200">Village Level:</b> ASHA workers</li>
+                <li><b class="text-gray-200">Sub-Health Center (SHC) Level:</b> ANMs and CHOs</li>
+                <li><b class="text-gray-200">Primary Health Center (PHC) Level:</b> Medical Officers (MOs), Staff Nurses, Pharmacists, and Lab Technicians</li>
+                </ul>
+                <p class="text-gray-400 mt-4">To maintain data integrity and workflow clarity, the app is governed by a <b class="text-gray-200">Role-Based Access Control (RBAC) System</b>, which ensures that each user only accesses relevant modules and permissions based on their designation and facility level.</p>
+            </div>
+
+            <!-- User Needs & Business Goals -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <img src="./images/chip2/icons/business.svg" alt="Logo" class="w-12 h-auto"/>
+                <p class="text-xl font-bold mt-4">User Needs & Business Goals</p>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                    <li>Field users needed <b class="text-gray-200">streamlined workflows</b> tailored to their daily tasks.</li>
+                    <li>Supervisors required <b class="text-gray-200">visibility into data</b> across levels without clutter.</li>
+                    <li>Khushi Baby NGO aimed to <b class="text-gray-200">ensure security, accuracy, and hierarchy alignment</b> across users.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+
+    <!-- Research -->
+    <div class="flex flex-col gap-6 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-4">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Userflow</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+            <p class="text-gray-400 text-center mt-2 lg:w-4/5">The application's information architecture was redesigned based on user feedback and persona insights. The goal was to ensure that navigation was intuitive, and information was organized in a logical and accessible manner.</p>
+            
+            <div class="w-full mx-auto mt-4">
+                <img src="./images/samasta/userflow_1.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg shadow-md" />
+            </div>
+        </div>
+    </div>
+
+    <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+
+    <!-- Final Solution -->
+    <div class="flex flex-col gap-8 px-4">
+
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8 lg:w-3/5 lg:m-auto lg:px-0">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Final Solution</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+        </div>
+
+        <!-- Sub-section Header -->
+        <div class="flex flex-col gap-4 lg:w-3/5 lg:m-auto lg:px-0">
+            <div class="flex flex-col gap-2">
+                <p class="text-xl font-bold">Overview of the Final Design</p>
+            </div>
+            <p class="text-gray-400">The CHIP application was designed to be role-sensitive, offline-capable, and workflow-driven — addressing real-life needs of ASHAs, ANMs, CHOs, and PHC-level staff across rural healthcare settings.</p>
+
+            <ul class="list-disc list-inside text-gray-400 space-y-2 m1-4">
+                <li>Homepage and navigation auto-adjust based on the user's role and facility level.</li>
+                <li>Punch-IN reflects GPS and timestamp clearly.</li>
+                <li>RBAC implemented via user profile at login and governed across UI components.</li>
+            </ul>
+        </div>
+
+        <!-- UI Designs - section wise -->
+        <div class="grid grid-cols-1 gap-8 lg:w-3/5 lg:m-auto lg:px-0">
+
+            <!-- Out Patient Department (OPD) -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Out Patient Department (OPD)</h3>
+                        <p class="text-gray-400">This module handles the entire OPD workflow, from patient arrival to consultation and treatment. It integrates queue management, displaying patient status and prioritizing cases based on urgency. Health workers can manage patient flow, assign tokens, and streamline movement between different service points (e.g., consultation, lab tests, pharmacy). The system tracks patients' progress through the OPD process, ensuring efficient and timely care.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/samasta/feature_1_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inventory Management -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Inventory Management</h3>
+                        <p class="text-gray-400">Helps manage medical supplies and resources efficiently. This module tracks stock levels of medicines, vaccines, and equipment in real time, sends alerts for low stock, and generates restocking orders. It also maintains a history of usage, expiration dates, and supply chain updates.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/samasta/feature_2_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patient Registration -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Inventory Management</h3>
+                        <p class="text-gray-400">Streamlines patient intake by allowing health workers to efficiently capture patient details, demographic information, and medical history. This module offers a user-friendly form with auto-fill features, reducing data entry time and ensuring accuracy. Integrated with Aadhaar and other identification systems for quick verifications.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/samasta/feature_3_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outreach activity -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Outreach activity</h3>
+                        <p class="text-gray-400">Enables health workers to plan and track community outreach initiatives. This module includes features for scheduling immunization drives, health camps, and follow-up visits, with integrated reminders. It also logs outreach efforts, records attendance, and syncs data with centralized health records to ensure continuity of care.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/samasta/feature_4_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Dashboard</h3>
+                        <p class="text-gray-400">A centralized hub for higher-level officials to monitor OPD performance, track patient visits, and view trends in disease outbreaks and medication prescriptions. This module provides data visualization through charts and graphs, giving insights into resource allocation, patient demographics, and the effectiveness of interventions.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/samasta/feature_5_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Summary of System-Wide Benefits -->
+        <div class="flex flex-col gap-4 lg:w-3/5 lg:m-auto lg:px-0">
+            <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-2">
+                    <p class="text-xl font-bold">Summary of System-Wide Benefits</p>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto">
+                <div class="border border-gray-300 rounded-2xl shadow-sm overflow-hidden">
+                  <table class="min-w-full border-collapse">
+                    <thead>
+                      <tr class="bg-gray-100">
+                        <th class="text-left p-4 text-gray-700 font-semibold text-lg border-b">Feature</th>
+                        <th class="text-left p-4 text-gray-700 font-semibold text-lg border-b">Description</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-gray-400 text-base">
+                      <tr class="border-b">
+                        <td class="p-4">Usability</td>
+                        <td class="p-4">Designed for low-literacy, first-time digital users</td>
+                      </tr>
+                      <tr class="border-b">
+                        <td class="p-4">Offline Support</td>
+                        <td class="p-4">All critical functions work offline with smart sync handling</td>
+                      </tr>
+                      <tr class="border-b">
+                        <td class="p-4">Security & Access</td>
+                        <td class="p-4">Fine-grained control through RBAC</td>
+                      </tr>
+                      <tr class="border-b">
+                        <td class="p-4">Data Quality</td>
+                        <td class="p-4">Real-time validation, skip logic, and progressive save enhance accuracy</td>
+                      </tr>
+                      <tr>
+                        <td class="p-4">Scalability</td>
+                        <td class="p-4">Modules designed to plug-and-play across health programs and states</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+              
+        </div>
+
+        <!-- Technical & Accessibility Considerations -->
+        <div class="flex flex-col gap-4 lg:w-3/5 lg:m-auto lg:px-0">
+            <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-2">
+                    <p class="text-xl font-bold">Technical & Accessibility Considerations</p>
+                </div>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 m1-4">
+                    <li>Homepage and navigation auto-adjust based on the user's role and facility level.</li>
+                    <li>Punch-IN reflects GPS and timestamp clearly.</li>
+                    <li>RBAC implemented via user profile at login and governed across UI components.</li>
+                </ul>
+            </div>
+        </div>
+        
+          
+    </div>
+
+    <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+
+    <!-- Conclusion -->
+    <div class="flex flex-col gap-6 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Conclusion</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+
+            <p class="text-gray-400 text-center">Working on the HWC OPD management app was an insightful journey, allowing me to design a system that significantly improves healthcare service delivery in rural areas. By focusing on user-centered design, I created modules that simplify complex workflows for health workers and ensure better patient care through streamlined processes. Integrating queue management with the OPD workflow, inventory management, and outreach activities provided a comprehensive solution that caters to the diverse needs of health workers and administrative officials alike.</p>
+
+            <p class="text-gray-400 text-center">This project deepened my understanding of healthcare challenges in underserved areas and the role of efficient digital solutions in addressing them. The key takeaway was striking a balance between usability and functionality—designing for users with varying technical expertise while ensuring all critical operations are handled efficiently. The experience reinforced the importance of aligning technology with the needs of healthcare systems and inspired me to continue exploring ways to create impactful designs in the health sector.</p>
+
+        </div>
+    </div>
+
+
+    <!-- More Projects 1 -  -->
+    <section class="py-12 bg-gray-800">
+        <div class="lg:w-4/5 mx-auto px-3">
+          <div class="flex flex-col md:flex-row items-center">
+            
+            <!-- Left: Project Image -->
+            <div class="w-1/2 w-full lg:order-1">
+                <img src="./images/chip/chip cover.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+            </div>
+      
+            <!-- Right: Text Content -->
+            <div class="w-1/2 w-full px-6 pt-6 lg:order-2">
+                <h3 class="text-2xl md:text-3xl font-semibold mb-4">Project Title</h3>
+                <p class="text-gray-400 mb-6">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300">View Details</a>
+            </div>
+      
+          </div>
+        </div>
+    </section>
+
+    <!-- More Projects 2 -  -->
+    <section class="py-12 bg-gray-800">
+        <div class="lg:w-4/5 mx-auto px-3">
+          <div class="flex flex-col md:flex-row items-center">
+            
+            <!-- Left: Project Image -->
+            <div class="w-1/2 w-full lg:order-2">
+                <img src="./images/chip/chip cover.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+            </div>
+      
+            <!-- Right: Text Content -->
+            <div class="w-1/2 w-full px-6 pt-6 lg:order-1">
+                <h3 class="text-2xl md:text-3xl font-semibold mb-4">Project Title</h3>
+                <p class="text-gray-400 mb-6">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300">View Details</a>
+            </div>
+      
+          </div>
+        </div>
+    </section>
+
+    <!-- Bottom Bar -->
+    <div class="w-full flex flex-col gap-2 items-center py-16 bg-gray-950 mt-8">
+        <div class="flex flex-col text-center">
+            <p class="text-xl font-semibold m-2">Thank you for your interest in my work!</p>
+            <p class="m-2">Thank you for your interest in my work!</p>
+        </div>
+        <p class="text-gray-400 m-2">Made by Sumit Nikhare.  © 2024 Sumit Nikhare</p>
+    </div>
+
+    <!-- JS -->
+    <script>
+        const fab = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            fab.classList.remove('opacity-0', 'pointer-events-none');
+          } else {
+            fab.classList.add('opacity-0', 'pointer-events-none');
+          }
+        });
+
+        // Hiding and showing the navbar on scroll
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function () {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            navbar.classList.add('navbar-hidden');
+        } else {
+            // Scrolling up
+            navbar.classList.remove('navbar-hidden');
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+        });
+    </script>
+      
+    
+
+</body>
+</html>

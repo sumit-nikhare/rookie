@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,47 +64,28 @@
     </style>
 </head>
 
-<body class="bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%220.5%22%20fill%3D%22%23444%22%20/%3E%3C/svg%3E')] bg-fixed bg-repeat bg-gray-950 text-gray-200 flex flex-col gap-8 lg:gap-12 animated-bg">
+<body class="bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%220.5%22%20fill%3D%22%23444%22%20/%3E%3C/svg%3E')] bg-fixed bg-repeat bg-gray-950 text-gray-200 flex flex-col gap-8 lg:gap-12 animated-bg scroll-smooth">
     <!-- Floating Action Button -->
     <!-- <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 bg-gray-800 hover:bg-gray-700 text-white hover:text-amber-300 p-4 rounded-full shadow-lg transition duration-300 z-50 opacity-0 pointer-events-none">
         <svg class="col" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
     </button> -->
 
-    <!-- Top Bar -->
     <header id="navbar" class="fixed top-0 left-0 w-full bg-gray-950 text-white p-4 shadow-lg z-50 navbar-transition">
-        <div class="flex flex-col gap-3 justify-between items-center">
-            <h1 class="text-2xl font-medium">sumit.design</h1>
-            <nav>
-                <ul class="flex space-x-6">
-                <li><a href="./about.html" class="text-white hover:text-amber-500 py-2 transition duration-500 ease-in-out">About me</a></li>
-                <li><a href="#" class="text-white hover:text-amber-500 py-2 transition duration-500 ease-in-out">Projects</a></li>
-                <li><a href="#" class="text-white hover:text-amber-500 py-2 transition duration-500 ease-in-out">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="flex flex-col gap-2 justify-between items-center">
+          <h1 class="text-2xl font-medium">
+            <a href="./index.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">sumit.design</a>
+          </h1>
+          <nav class="flex gap-6">
+            <a href="./about.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">About me</a>
+            <a href="#projects" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Projects</a>
+            <a href="mailto:workspace0105@gmail.com" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Contact</a>
+          </nav>
         </div>
     </header>
+      
 
     <!-- Hero -->
     <div class="flex flex-col gap-8 justify-center items-center text-center h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0">
-        <!-- <div>
-            <h1 class="text-4xl font-medium">Hi, I’m 
-                <span class="inline-block text-amber-300 relative pb-3">
-                    <span class="relative z-10">Sumit.</span>
-                    <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="absolute bottom-0 left-0 w-full h-3 z-0">
-                      <path d="M0,5 Q50,0 100,5" fill="none" stroke="#fcd34d" stroke-width="3"
-                        stroke-dasharray="100"
-                        stroke-dashoffset="100"
-                        style="animation: drawUnderline 1s ease forwards;"></path>
-                    </svg>
-                </span>
-            </h1>
-
-            <div class="relative w-full max-w-xl text-center text-xl font-medium text-gray-300 mt-6">
-                <div class="absolute inset-0 opacity-0 fade-text-1">Product Designer</div>
-                <div class="absolute inset-0 opacity-0 fade-text-2">UX/UI Designer</div>
-                <div class="absolute inset-0 opacity-0 fade-text-3">Design Anthusiast</div>
-            </div>
-        </div> -->
 
         <div class="text-center space-y-4">
             <div class="text-2xl lg:text-3xl font-serif text-gray-400 flex flex-wrap justify-center items-center gap-2">
@@ -125,33 +106,33 @@
     </div>
 
     <!-- Projects -->
-    <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+    <div id="projects" class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0">
         <!-- Section Header -->
         <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-2">
                 <p class="text-3xl font-bold">Projects</p>
                 <div class="border-b-4 border-yellow-400 w-16"></div>
             </div>
-            <p class="text-gray-400">CHIP V2.0 is a healthcare software developed by Khushi Baby NGO to digitize and manage public health operations at the last mile. The platform includes modules for Login, Attendance (Punch-IN), User Profiles, Digital Health Survey (DHS) Role-Based Access Control (RBAC), and critical health programs like ABHA linkage, Family Planning, and tracking Maternal and Infant Mortality (IMR/MMR).</p>
+            <p class="text-gray-400 font-light">Explore a curated selection of my projects that showcase my process from research to final design. These works reflect how I approach problems, collaborate with stakeholders, and craft user-centered solutions that are both functional and visually engaging.</p>
         </div>
 
         <!-- Khushibaby -->
         <div class="flex flex-col gap-6">
 
             <!-- Comapany Details -->
-            <div class="flex flex-col gap-4">
-                <p class="text-xl underline underline-offset-4"> <a href="https://www.khushibaby.org">Khushibaby</a></p>
-                <p class="text-gray-400">Sr. UI/UX Designer | Jan 23 - Present</p>
-                <p class="text-gray-400">As a UI/UX designer at Khushi Baby, I played a key role in enhancing maternal and child healthcare in rural communities through innovative digital health solutions. I designed intuitive mobile interfaces for a health monitoring app, essential for healthcare workers in these areas. My focus was on creating user-friendly experiences that enabled easy access to and updates of vital health records.</p>
-                <p class="text-gray-400">I conducted user research to understand the needs of healthcare workers and families, ensuring that my designs addressed their specific challenges. By streamlining the monitoring process for vaccinations and maternal health, I aimed to improve healthcare delivery in underserved regions. My work contributed to empowering healthcare workers and reducing maternal and infant mortality rates, making a meaningful impact on public health in rural India.</p>
+            <div class="flex flex-col gap-2">
+                <p class="text-2xl underline underline-offset-4 hover:text-amber-300 transition-all duration-300"> <a href="https://www.khushibaby.org">Khushibaby</a></p>
+                <p class="text-gray-300 mt-1">Sr. UI/UX Designer | Jan 23 - Present</p>
+                <p class="text-gray-400 font-light mt-3">As a UI/UX designer at Khushi Baby, I played a key role in enhancing maternal and child healthcare in rural communities through innovative digital health solutions. I designed intuitive mobile interfaces for a health monitoring app, essential for healthcare workers in these areas. My focus was on creating user-friendly experiences that enabled easy access to and updates of vital health records.</p>
+                <p class="text-gray-400 font-light">I conducted user research to understand the needs of healthcare workers and families, ensuring that my designs addressed their specific challenges. By streamlining the monitoring process for vaccinations and maternal health, I aimed to improve healthcare delivery in underserved regions. My work contributed to empowering healthcare workers and reducing maternal and infant mortality rates, making a meaningful impact on public health in rural India.</p>
             </div>
 
             <!-- Project"1 - CHIP 2.0 -->
             <div class="flex flex-col bg-gray-900 rounded-3xl p-3 lg:p-6 ">
-                <div class="flex flex-col gap-2 lg:flex-row items-center">
+                <div class="flex flex-col lg:flex-row items-center">
                     <!-- Left: Project Image -->
                     <div class="w-1/2 w-full lg:order-1">
-                        <a href="./chip-2.html" target="_blank" rel="noopener noreferrer">
+                        <a href="./project-1.html">
                             <img src="./images/chip2/chip2.0_thumbnail.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
                         </a>
                     </div>
@@ -159,11 +140,10 @@
                     <!-- Right: Text Content -->
                     <div class="w-1/2 w-full flex flex-col gap-3 lg:gap-8 lg:px-6 lg:order-2">
                         <h3 class="text-2xl lg:text-3xl font-semibold">Community Health Integrated Platform (CHIP) 2.0</h3>
-                        <p class="text-gray-400">The Community Health Integrated Platform (CHIP) is an Android app for ASHA workers and ANMs, designed to streamline health record management and reduce paper dependency. I contributed to enhancing the Khushi Baby health app by integrating features like RMNCH+A coverage and ABHA integration. User research guided the interface design, ensuring it met healthcare workers' needs. Continuous testing confirmed that the app effectively improves maternal and child health outcomes in underserved areas.</p>
+                        <p class="text-gray-400 font-light">The Community Health Integrated Platform (CHIP) is an Android app for ASHA workers and ANMs, designed to streamline health record management and reduce paper dependency. I contributed to enhancing the Khushi Baby health app by integrating features like RMNCH+A coverage and ABHA integration. User research guided the interface design, ensuring it met healthcare workers' needs. Continuous testing confirmed that the app effectively improves maternal and child health outcomes in underserved areas.</p>
                         <a href="./project-1.html">
-                            <button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">View Details</button>
+                            <button class="bg-gray-800 text-white hover:text-amber-300 font-medium py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">View Details</button>
                         </a>
-                        
                     </div>
                 </div>
             </div>
@@ -181,7 +161,7 @@
                     <!-- Right: Text Content -->
                     <div class="w-1/2 w-full flex flex-col gap-3 lg:gap-8 lg:px-6 lg:order-1">
                         <h3 class="text-2xl lg:text-3xl font-semibold">Samasta Application & Dashbaord</h3>
-                        <p class="text-gray-400">The Samasta App was developed to streamline the operations of Health and Wellness Centres in Karnataka, enhancing healthcare delivery through efficient patient management, inventory control, outreach activities, and data reporting for higher officials. This case study outlines the design and development process, user research, key features, and future enhancements of the app, with a special emphasis on the newly integrated Profile Module for Medical Officers (MOs).</p>
+                        <p class="text-gray-400 font-light">The Samasta App was developed to streamline the operations of Health and Wellness Centres in Karnataka, enhancing healthcare delivery through efficient patient management, inventory control, outreach activities, and data reporting for higher officials. This case study outlines the design and development process, user research, key features, and future enhancements of the app, with a special emphasis on the newly integrated Profile Module for Medical Officers (MOs).</p>
                         <a href="./samasta.html">
                             <button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">View Details</button>
                         </a>
@@ -195,10 +175,10 @@
         <div class="flex flex-col gap-6">
 
             <!-- Comapany Details -->
-            <div class="flex flex-col gap-4">
-                <p class="text-xl underline underline-offset-4"> <a href="https://www.permutehq.com/">Permute Solutions Pvt. Ltd.</a></p>
-                <p class="text-gray-400">Associate UI/UX Designer | Mar 22 - Dec 22</p>
-                <p class="text-gray-400">As a UI/UX designer at Permute Solutions Pvt. Ltd., I focused on creating user-centered designs for a variety of digital platforms. My role involved translating client requirements into intuitive, aesthetically pleasing interfaces for web and mobile applications. I was responsible for designing user flows, wireframes, prototypes, and final high-fidelity designs that aligned with both business goals and user needs.</p>
+            <div class="flex flex-col gap-2">
+                <p class="text-xl underline underline-offset-4 hover:text-amber-300 transition-all duration-300"> <a href="https://www.permutehq.com/">Permute Solutions Pvt. Ltd.</a></p>
+                <p class="text-gray-300 mt-1">Associate UI/UX Designer | Mar 22 - Dec 22</p>
+                <p class="text-gray-400 font-light mt-3">As a UI/UX designer at Permute Solutions Pvt. Ltd., I focused on creating user-centered designs for a variety of digital platforms. My role involved translating client requirements into intuitive, aesthetically pleasing interfaces for web and mobile applications. I was responsible for designing user flows, wireframes, prototypes, and final high-fidelity designs that aligned with both business goals and user needs.</p>
                 <p class="text-gray-400">I worked closely with developers and project managers to ensure seamless integration of design elements and usability features, optimizing the overall user experience. My designs aimed to simplify complex processes and enhance the functionality of the software solutions we delivered, contributing to improved customer satisfaction and operational efficiency for our clients.</p>
             </div>
 
@@ -250,7 +230,7 @@
         <!-- Personal Projects -->
         <div class="flex flex-col gap-6">
 
-            <!-- Comapany Details -->
+            <!-- Company Details -->
             <div class="flex flex-col gap-4">
                 <p class="text-xl underline underline-offset-4"> <a href="https://www.permutehq.com/">Personal Projects</a></p>
 

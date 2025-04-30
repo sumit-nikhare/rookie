@@ -1,59 +1,9 @@
 npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
 
+Components
 
-# CHIP 2.0
-- Modules
-    - Design System
-    - Homepage
-    - User Registration
-    - DHS + Stats
-    - Family Planning + Maternal Health + Overview
-    - Profile
-- PF Layout
-    - Title
-    - Hero Image
-    - The problem
-        - asdf
-    - Research
-        - Interviews
-        - Surveys
-        - Field Observations
-    - Synthesis
-        - Key Takeaways
-        - Persona
-    - Ideation
-        - How might we
-        - User flows
-        - 
-    - Design
-        - Wireframes/Low-fidility
-        - Moodboard
-        - Style Guide
-        - Components
-    - Solution
-        - 
-    - Usability Test
-        - Prototype
-        - Outcome
-        - Iterations
-    - Key Takeaways
+# Normal Text
+text-gray-400 font-light
 
-
-
-# Incentive
-- PF Layout
-    - 
-
-# Sickle Cell Anemia + Tracking of Sample
-
-# ABHA
-
-# CHIP
-
-# GOK
-- Modules
-    - OPD
-    - Inventory
-    
-# Pointers
-- 
+# Button
+bg-gray-800 text-white hover:text-amber-300 font-medium py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max

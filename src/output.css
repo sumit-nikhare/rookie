@@ -1181,6 +1181,9 @@
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .grid-cols-none {
     grid-template-columns: none;
   }
@@ -1497,6 +1500,9 @@
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
+  }
+  .rounded-xs {
+    border-radius: var(--radius-xs);
   }
   .rounded-s {
     border-start-start-radius: 0.25rem;
@@ -1881,6 +1887,9 @@
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
@@ -2254,6 +2263,9 @@
   }
   .decoration-from-font {
     text-decoration-thickness: from-font;
+  }
+  .underline-offset-3 {
+    text-underline-offset: 3px;
   }
   .underline-offset-4 {
     text-underline-offset: 4px;
@@ -2739,6 +2751,11 @@
       flex-direction: row;
     }
   }
+  .lg\:gap-3 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 3);
+    }
+  }
   .lg\:gap-8 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 8);
@@ -2799,18 +2816,6 @@
     }
   }
 }
-
-/* Custom Components */
-@layer components {
-  .btn-set {
-    @apply bg-amber-200
-  }
-
-  .btn-primary {
-    @apply bg-gray-800 text-white hover:text-amber-300 font-medium py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max;
-  }
-}
-
 @keyframes spin {
   to {
     transform: rotate(360deg);

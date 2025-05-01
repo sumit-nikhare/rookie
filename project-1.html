@@ -41,7 +41,7 @@
     </style>
 </head>
 
-<body class="bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%220.5%22%20fill%3D%22%23444%22%20/%3E%3C/svg%3E')] bg-fixed bg-repeat bg-gray-950 text-gray-200 flex flex-col gap-8 lg:gap-12 animated-bg">
+<body class="bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%220.5%22%20fill%3D%22%23444%22%20/%3E%3C/svg%3E')] bg-fixed bg-repeat bg-gray-950 text-gray-200 flex flex-col gap-8 lg:gap-12 animated-bg font-light">
 
     <!-- Floating Action Button -->
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
@@ -65,7 +65,7 @@
             <nav>
                 <ul class="flex space-x-6">
                 <li><a href="./about.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">About me</a></li>
-                <li><a href="#" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Projects</a></li>
+                <li><a href="./index.html#projects" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Projects</a></li>
                 <li><a href="mailto:workspcae0105@gmai.com" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Contact</a></li>
                 </ul>
             </nav>
@@ -106,7 +106,7 @@
             <p class="text-gray-400 text-center lg:w-4/5">CHIP V2.0 is a healthcare software developed by Khushi Baby NGO to digitize and manage public health operations at the last mile. The platform includes modules for Login, Attendance (Punch-IN), User Profiles, Digital Health Survey (DHS) Role-Based Access Control (RBAC), and critical health programs like ABHA linkage, Family Planning, and tracking Maternal and Infant Mortality (IMR/MMR).</p>
         </div>
 
-        <!--  -->
+        <!-- Project Type -->
         <div class="flex flex-col gap-8 lg:flex-row bg-gray-900 rounded-3xl p-6 mx-4">
             <div class="flex flex-col items-center w-full">
                 <p class="text-xl font-bold text-center">Project type: End-to-end app + branding</p>
@@ -152,69 +152,39 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
             <!-- Research & Strategy -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
-                <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
-                <p class="text-xl font-bold">Research & Strategy</p>
-                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
-                    <li>Conducted field visits, user interviews, and usability audits at village, SHC, and PHC levels</li>
-                    <li>Collaborated with stakeholders to align user needs with program goals (DHS, ABHA, Family Planning, etc.)</li>
-                    <li>Created personas and journey maps for ASHAs, ANMs, CHOs, and MOs</li>
-                </ul>
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6 gap-2 lg:gap-3">
+                <p class="text-xl font-medium">Research & Strategy</p>
+                <p class="text-gray-400 font-light">Fieldwork-driven insights and stakeholder collaboration to align user needs with public health program goals.</p>
             </div>
 
             <!-- Experience Design -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
-                <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
-                <p class="text-xl font-bold">Experience Design</p>
-                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
-                    <li>Conducted field visits, user interviews, and usability audits at village, SHC, and PHC levels</li>
-                    <li>Collaborated with stakeholders to align user needs with program goals (DHS, ABHA, Family Planning, etc.)</li>
-                    <li>Created personas and journey maps for ASHAs, ANMs, CHOs, and MOs</li>
-                </ul>
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6 gap-2 lg:gap-3">
+                <p class="text-xl font-medium">Experience Design</p>
+                <p class="text-gray-400 font-light">Designed user-centered solutions grounded in field research and aligned with national health program objectives.</p>
             </div>
 
             <!-- Wireframing & Prototyping -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
-                <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
-                <p class="text-xl font-bold">Wireframing & Prototyping</p>
-                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
-                    <li>Built wireframes and interactive prototypes across modules: login, profile, DHS, IMR/MMR, family planning, etc.</li>
-                    <li>Created modular flows to support scaling and role flexibility</li>
-                    <li>Included error prevention, skip logic, and field-level validation in form-based modules</li>
-                </ul>
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6 gap-2 lg:gap-3">
+                <p class="text-xl font-medium">Wireframing & Prototyping</p>
+                <p class="text-gray-400 font-light">Crafted scalable, role-flexible flows and interactive prototypes with built-in logic and form-level precision.</p>
             </div>
 
             <!-- Visual Design -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
-                <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
-                <p class="text-xl font-bold">Visual Design</p>
-                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
-                    <li>Developed a clean, minimal UI optimized for low-literacy users and rural screen sizes</li>
-                    <li>Designed color-coded modules and iconography for faster recognition</li>
-                    <li>Created a bilingual interface (Hindi/English) and large tap targets for field usability</li>
-                </ul>
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6 gap-2 lg:gap-3">
+                <p class="text-xl font-medium">Visual Design</p>
+                <p class="text-gray-400 font-light">Designed an intuitive, bilingual interface tailored for rural users—focusing on clarity, accessibility, and recognition.</p>
             </div>
 
             <!-- Testing & Iteration -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
-                <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
-                <p class="text-xl font-bold">Testing & Iteration</p>
-                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
-                    <li>Ran usability testing with ASHAs, ANMs, and PHC staff for real-world validation</li>
-                    <li>Refined the DHS module with autosave, offline mode, and sectional progress tracking</li>
-                    <li>Improved RBAC interaction through helper tooltips and locked visual states</li>
-                </ul>
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6 gap-2 lg:gap-3">
+                <p class="text-xl font-medium">Testing & Iteration</p>
+                <p class="text-gray-400 font-light">Validated designs with frontline users and continuously refined features for usability, accessibility, and performance in the field.</p>
             </div>
 
             <!-- Collaboration & Handoff -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
-                <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
-                <p class="text-xl font-bold">Collaboration & Handoff</p>
-                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
-                    <li>Delivered polished, developer-friendly design specs and components</li>
-                    <li>Worked closely with the tech team for implementation and QA</li>
-                    <li>Integrated post-deployment feedback to improve real-world adoption</li>
-                </ul>
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6 gap-2 lg:gap-3">
+                <p class="text-xl font-medium">Collaboration & Handoff</p>
+                <p class="text-gray-400 font-light">Streamlined design-to-dev handoff with clear specs, close tech collaboration, and iterative improvements post-deployment.</p>
             </div>
         </div>
     </div>
@@ -229,7 +199,7 @@
                 <p class="text-2xl font-bold">Problem Statement</p>
                 <div class="border-b-4 border-yellow-400 w-16"></div>
             </div>
-            <p class="text-gray-400 text-center lg:w-4/5">Led the entire design process across modules and user levels—translating complex workflows into intuitive, role-sensitive experiences.</p>
+            <p class="text-gray-400 text-center lg:w-4/5">Exploring the complexities of healthcare data management in rural settings, focusing on streamlining workflows for diverse frontline workers, ensuring role-specific access, and overcoming the barriers of low digital literacy and connectivity to improve accuracy, efficiency, and data security.</p>
         </div>
 
         <div class="grid grid-cols-1 gap-4">
@@ -270,12 +240,12 @@
                 <p class="text-2xl font-bold">Research</p>
                 <div class="border-b-4 border-yellow-400 w-16"></div>
             </div>
-            <p class="text-gray-400 text-center lg:w-4/5">Led the entire design process across modules and user levels—translating complex workflows into intuitive, role-sensitive experiences.</p>
+            <p class="text-gray-400 text-center lg:w-4/5">Conducting in-depth field observations (shadowing ASHAs and ANMs), user interviews, and contextual inquiry to gain a comprehensive understanding of healthcare workers' workflows, challenges, and needs, ensuring that design solutions are rooted in real-world behavior and aligned with public health program goals.</p>
         </div>
 
         <div class="grid grid-cols-1 gap-8">
             <!-- Field Observations (Shadowing ASHAs and ANMs) -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-3 lg:p-6">
                 <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
                 <p class="text-xl font-bold">Field Observations (Shadowing ASHAs and ANMs)</p>
                 <p class="text-gray-400 mt-4">To understand the real-world context of CHIP usage, I conducted immersive field visits to rural areas. I shadowed <b class="text-gray-200">ASHAs and ANMs during their daily routines</b>, particularly while they:</p>
@@ -292,16 +262,16 @@
                 <div class="flex flex-col gap-2 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
                     <p class="font-bold">Key Insight</p>
                     <ul class="list-disc list-inside text-gray-400 space-y-2">
-                        <li>Conducted <b class="text-gray-200">household visits</b> for DHS and other health-related data collection</li>
-                        <li>Interacted with community members, often in challenging physical or social conditions</li>
-                        <li>Used CHIP on <b class="text-gray-200">low-end Android phones</b>, sometimes with intermittent network or power access</li>
+                        <li><b class="text-gray-200">DHS forms are lengthy and repetitive,</b>  which increases fatigue and the risk of errors.</li>
+                        <li>Users were more confident with <b class="text-gray-200">step-by-step flows,</b> where the form is broken into manageable sections.</li>
+                        <li><b class="text-gray-200">Offline capability and autosave</b> were non-negotiable due to inconsistent connectivity.</li>
                     </ul>
                 </div>
-                <p class="text-gray-400 mt-4">To maintain data integrity and workflow clarity, the app is governed by a <b class="text-gray-200">Role-Based Access Control (RBAC) System</b>, which ensures that each user only accesses relevant modules and permissions based on their designation and facility level.</p>
+                <p class="text-gray-400 mt-4">These insights were crucial in refining the design to improve efficiency, reduce errors, and better accommodate the unique challenges faced by frontline workers.</p>
             </div>
 
             <!-- User Interviews -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-3 lg:p-6">
                 <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
                 <p class="text-xl font-bold">User Interviews</p>
                 <p class="text-gray-400 mt-4">I conducted semi-structured interviews with healthcare workers and supervisors across all three levels:</p>
@@ -315,7 +285,7 @@
                     <img src="./images/chip2/interview.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg shadow-md my-8" />
                 </div>
 
-                <p class="text-gray-400 mb-6">These sessions helped identify pain points, mental models, and expectations from CHIP across different roles.</p>
+                <p class="text-gray-400 mb-6">These interviews provided valuable insights into pain points, mental models, and expectations from CHIP across different roles.</p>
 
                 <div class="flex flex-col gap-2 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
                     <p class="font-bold">Key Insight</p>
@@ -325,11 +295,11 @@
                         <li>Each role required tailored interfaces, not just filtered versions of the same screen.</li>
                     </ul>
                 </div>
-                <p class="text-gray-400 mt-4">To maintain data integrity and workflow clarity, the app is governed by a <b class="text-gray-200">Role-Based Access Control (RBAC) System</b>, which ensures that each user only accesses relevant modules and permissions based on their designation and facility level.</p>
+                <p class="text-gray-400 mt-4">These findings were essential in refining the user experience to better address the distinct needs of each role within the system.</p>
             </div>
 
             <!-- Contextual Inquiry -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-3 lg:p-6">
                 <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
                 <p class="text-xl font-bold">Contextual Inquiry</p>
                 <p class="text-gray-400 mt-4">While users performed tasks like DHS entry or Punch-IN, I asked them to “think aloud” to capture their natural workflow, hesitation points, and expectations.</p>
@@ -353,14 +323,14 @@
                         <li>Field-level hints and error validation reduced hesitation during form input.</li>
                     </ul>
                 </div>
-                <p class="text-gray-400 mt-4">To maintain data integrity and workflow clarity, the app is governed by a <b class="text-gray-200">Role-Based Access Control (RBAC) System</b>, which ensures that each user only accesses relevant modules and permissions based on their designation and facility level.</p>
+                <p class="text-gray-400 mt-4">These insights played a key role in optimizing the form design to improve usability and reduce user friction.</p>
             </div>
         </div>
 
         <!-- Personas -->
         <div class="flex flex-col gap-2">
             <p class="text-xl font-bold mt-4">Personas</p>
-            <p class="text-gray-400 mb-4">To design CHIP for real-world usability, I created role-based personas that represent the distinct needs, behaviors, and constraints of users across different healthcare levels. These personas helped ensure that each interface was tailored, contextual, and respectful of users’ daily challenges.</p>
+            <p class="text-gray-400 mb-4 font-light">Based on the insights gathered from field observations, user interviews, and contextual inquiry, I created detailed personas for the primary users of CHIP. These personas represent the unique needs, challenges, and behaviors of key healthcare workers across different levels of the healthcare system, including ASHAs, ANMs, CHOs, MOs, and other frontline staff. Each persona was crafted to ensure that the design solutions would address the specific pain points and tasks of these diverse roles, from data entry to monitoring and verification.</p>
 
             <div class="grid grid-cols-1 gap-8">
                 <!-- ASHA (Village Level User) -->
@@ -405,7 +375,7 @@
                         </div>
                     </div>
     
-                    <p class="text-gray-400 mt-4">To maintain data integrity and workflow clarity, the app is governed by a <b class="text-gray-200">Role-Based Access Control (RBAC) System</b>, which ensures that each user only accesses relevant modules and permissions based on their designation and facility level.</p>
+                    <p class="text-gray-400 mt-4 font-light">These insights directly influenced the design of CHIP’s interface for ASHAs—prioritizing simple, guided forms with local language support, offline functionality, and visual cues—empowering users like Suman Devi to complete their daily health tasks confidently and independently, even in low-connectivity, high-pressure field conditions.</p>
                 </div>
     
                 <!-- ANM (Sub-Health Center Level User) -->
@@ -449,7 +419,7 @@
                         </div>
                     </div>
     
-                    <p class="text-gray-400 mt-4">To maintain data integrity and workflow clarity, the app is governed by a <b class="text-gray-200">Role-Based Access Control (RBAC) System</b>, which ensures that each user only accesses relevant modules and permissions based on their designation and facility level.</p>
+                    <p class="text-gray-400 mt-4 font-light">These needs shaped CHIP’s design for ANMs like Rekha Sharma by introducing dashboard summaries, editable records with audit trails, and streamlined access to family-level data—enabling her to manage heavy data loads efficiently while maintaining accuracy and accountability across multiple responsibilities.</p>
                 </div>
 
                 <!-- MO/Staff Nurse/Lab Tech (PHC Level Users) -->
@@ -493,9 +463,10 @@
                         </div>
                     </div>
     
-                    <p class="text-gray-400 mt-4">To maintain data integrity and workflow clarity, the app is governed by a <b class="text-gray-200">Role-Based Access Control (RBAC) System</b>, which ensures that each user only accesses relevant modules and permissions based on their designation and facility level.</p>
+                    <p class="text-gray-400 mt-4 font-light">To support users like Dr. Shikha Bansal, CHIP was designed with RBAC-based data visibility, exportable reports, and smart analytics—providing high-level summaries with the flexibility to drill down, flag inconsistencies, and make informed decisions quickly within a busy PHC environment.</p>
                 </div>
             </div>
+            <p class="text-gray-400 mb-4 font-light mt-4">Together, these personas ensured that CHIP’s design addressed the diverse goals, constraints, and workflows of its core users—whether conducting surveys in the field, managing data at the SHC, or overseeing operations at the PHC—creating a system that is inclusive, role-specific, and grounded in real-world use.</p>
         </div>
     </div>
 
@@ -553,12 +524,8 @@
             <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
                 <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
                 <p class="text-xl font-bold">Concept Exploration</p>
-                <p class="text-gray-400 mt-4">During ideation, I explored multiple UI concepts for each core module of CHIP. Every concept was evaluated based on user role, workflow complexity, and technical feasibility, especially in low-connectivity environments.</p>
+                <p class="text-gray-400 mt-4">During ideation, I explored multiple UI concepts for each core module of CHIP. Every concept was evaluated based on <b class="text-gray-200">user role</b>, <b class="text-gray-200">workflow complexity</b>, and <b class="text-gray-200">technical feasibilityw</b>, especially in low-connectivity environments.</p>
                 <p class="text-gray-400 mt-4">This was especially helpful in identifying:</p>
-
-                <!-- <div class="w-full mx-auto my-4">
-                    <img src="./images/chip/chip cover.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg shadow-md my-8" />
-                </div> -->
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 mt-8">
                     <!-- Punch-IN / Punch-OUT -->
@@ -582,7 +549,7 @@
                     </div>
                 </div>
                 
-                <p class="text-gray-400 mt-4">To maintain data integrity and workflow clarity, the app is governed by a <b class="text-gray-200">Role-Based Access Control (RBAC) System</b>, which ensures that each user only accesses relevant modules and permissions based on their designation and facility level.</p>
+                <p class="text-gray-400 mt-4 font-light">These explorations helped balance usability, accountability, and technical constraints—ensuring that each design decision was role-appropriate, minimally disruptive, and aligned with both user behavior and broader health system integration.</p>
             </div>
         </div>
 
@@ -590,7 +557,7 @@
         <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
             <img src="./images/chip2/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-2"/>
             <p class="text-xl font-bold mt-4">User Flows</p>
-            <p class="text-gray-400 mt-2">To design CHIP for real-world usability, I created role-based personas that represent the distinct needs, behaviors, and constraints of users across different healthcare levels. These personas helped ensure that each interface was tailored, contextual, and respectful of users’ daily challenges.</p>
+            <p class="text-gray-400 mt-2">Designing Scalable, Role-Based Flows for a Focused and Efficient Experience</p>
 
             <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
                 <li>App navigation is <b class="text-gray-200">contextualized by role</b>—ASHAs see fewer modules, while MOs have dashboard and supervision features.</li>
@@ -600,13 +567,15 @@
             <div class="w-full mx-auto">
                 <img src="./images/chip2/userflow_1.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg mt-4" />
             </div>
+
+            <p class="text-gray-400 mt-2">These modular, role-based flows ensured that each user experienced a focused and intuitive journey—minimizing cognitive load for frontline workers while enabling supervisors to seamlessly monitor and manage broader program operations.</p>
         </div>
 
         <!-- Wireframes & Prototyping -->
         <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
             <img src="./images/chip2/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-2"/>
             <p class="text-xl font-bold mt-4">Wireframes & Prototyping</p>
-            <p class="text-gray-400 mt-2">To design CHIP for real-world usability, I created role-based personas that represent the distinct needs, behaviors, and constraints of users across different healthcare levels. These personas helped ensure that each interface was tailored, contextual, and respectful of users’ daily challenges.</p>
+            <p class="text-gray-400 mt-2">Low- to mid-fidelity wireframes were created to visualize key modules—like DHS, ABHA, and Family Planning—ensuring clarity in structure and flow. Interactive prototypes allowed for early validation with users and stakeholders, helping refine navigation, logic, and screen behavior before development.</p>
 
             <div class="w-full mx-auto">
                 <img src="./images/chip2/wireframe_1.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg mt-4"/>
@@ -672,7 +641,7 @@
             <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
                 <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
                 <p class="text-xl font-bold">Participants</p>
-                <p class="text-gray-400 mt-4">Usability testing was conducted with 8 target users across roles and geographies:</p>
+                <p class="text-gray-400 mt-4">Usability testing was conducted with <b class="text-gray-200">8 target users</b> across roles and geographies:</p>
                 <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
                     <li><b class="text-gray-200">3 ASHAs</b> from rural villages</li>
                     <li><b class="text-gray-200">2 ANMs</b> stationed at SHCs</li>
@@ -686,8 +655,7 @@
             <div class="flex flex-col bg-gray-900 rounded-3xl p-3 lg:p-6">
                 <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
                 <p class="text-xl font-bold">Methods</p>
-                <p class="text-gray-400 mt-4">During ideation, I explored multiple UI concepts for each core module of CHIP. Every concept was evaluated based on user role, workflow complexity, and technical feasibility, especially in low-connectivity environments.</p>
-                <p class="text-gray-400 mt-4">This was especially helpful in identifying:</p>
+                <p class="text-gray-400 mt-4">A mix of contextual testing, technical safeguards, and scalable design patterns were used to ensure CHIP works reliably in real-world rural settings.</p>
 
                 <div class="overflow-x-auto pt-4">
                     <div class="border border-gray-700 rounded-2xl shadow-sm overflow-hidden">
@@ -724,14 +692,14 @@
                     </div>
                 </div>
                 
-                <p class="text-gray-400 mt-4">To maintain data integrity and workflow clarity, the app is governed by a <b class="text-gray-200">Role-Based Access Control (RBAC) System</b>, which ensures that each user only accesses relevant modules and permissions based on their designation and facility level.</p>
+                <p class="text-gray-400 mt-4">By grounding our methods in real field conditions and long-term program needs, we ensured CHIP could scale across regions while remaining dependable, secure, and easy to use for every healthcare worker.</p>
             </div>
 
             <!-- Success Metrics -->
             <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
                 <img src="./images/chip2/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-2 lg:mb-4"/>
                 <p class="text-xl font-bold mt-4">Success Metrics</p>
-                <p class="text-gray-400 mt-2">The usability testing helped evolve CHIP from a technically sound but cognitively heavy system into a user-centered, role-sensitive tool that aligned better with real-world workflows, boosting adoption and reducing training time.</p>
+                <p class="text-gray-400 mt-2">Post-implementation testing revealed significant improvements across key usability indicators. From faster DHS completion to increased confidence and reduced form errors, the iterative design directly translated to real-world benefits for frontline health workers.</p>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
                     <div class="flex flex-col gap-2">
@@ -754,6 +722,9 @@
                         <p class="text-xl font-medium">Validation reduced skipped required fields by 70%</p>
                     </div>
                 </div>
+
+                <p class="text-gray-400 mt-2">These measurable gains validated the design decisions made throughout CHIP’s development—proving that a user-centered, context-aware approach can drive both adoption and efficiency at scale.</p>
+
             </div>
         </div>
     </div>
@@ -793,7 +764,8 @@
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-2">
                         <h3 class="text-2xl lg:text-3xl font-semibold">Login & Registration (RBAC Enabled)</h3>
-                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                        <p class="text-gray-300 font-medium">Secure and Role-Aware Onboarding for Every User</p>
+                        <p class="text-gray-400 font-light">The login and registration module ensures that users access only the features relevant to their role through RBAC. With OTP-based login, QR scanning for facility codes, and a guided first-time setup, the flow is built to be both secure and simple—especially for users with limited digital literacy.</p>
                     </div>
 
                     <div class="flex flex-col gap-4 lg:flex-row items-center">
@@ -835,7 +807,8 @@
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-2">
                         <h3 class="text-2xl lg:text-3xl font-semibold">Punch-IN / Punch-OUT System</h3>
-                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                        <p class="text-gray-300 font-medium">Reliable Attendance Tracking Built for the Field</p>
+                        <p class="text-gray-400 font-light">This module enables healthcare workers to log their attendance with geo-tagged timestamps, even in low-connectivity areas. With offline caching, sync retries, and clear visual feedback, it helps maintain transparency and enables supervisors to monitor field activity in real time.</p>
                     </div>
 
                     <div class="flex flex-col gap-4 lg:flex-row items-center">
@@ -877,13 +850,14 @@
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-2">
                         <h3 class="text-2xl lg:text-3xl font-semibold">Digital Health Survey (DHS)</h3>
-                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                        <p class="text-gray-300 font-medium">Streamlined, Error-Resistant Surveying for Frontline Health Workers</p>
+                        <p class="text-gray-400 font-light">The DHS module guides users through complex health data collection with modular forms, skip logic, and autosave functionality. Designed for offline use, it supports various survey types while reducing errors and effort through smart validations and data reuse.</p>
                     </div>
 
                     <div class="flex flex-col gap-4 lg:flex-row items-center">
                       <!-- Left: Project Image -->
                         <div class="w-1/2 lg:w-3/5 w-full lg:order-1">
-                            <img src="./images/chip2/feature_1_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                            <img src="./images/chip2/feature_3_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
                         </div>
                 
                       <!-- Right: Text Content -->
@@ -919,13 +893,15 @@
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-2">
                         <h3 class="text-2xl lg:text-3xl font-semibold">ABHA ID Integration</h3>
-                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Digital Health Survey (DHS)</h3>
+                        <p class="text-gray-300 font-medium">Seamless Health ID Linking Without Disrupting Workflows</p>
+                        <p class="text-gray-400 font-light">This module enables optional ABHA ID creation or linking during or after registration, supporting both Aadhaar and mobile-based methods. With a guided, non-blocking flow, it promotes interoperability with India’s digital health stack—without slowing down frontline tasks.</p>
                     </div>
 
                     <div class="flex flex-col gap-4 lg:flex-row items-center">
                       <!-- Left: Project Image -->
                         <div class="w-1/2 lg:w-3/5 w-full lg:order-2">
-                            <img src="./images/chip2/feature_2_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                            <img src="./images/chip2/feature_4_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
                         </div>
                 
                       <!-- Right: Text Content -->
@@ -961,7 +937,8 @@
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-2">
                         <h3 class="text-2xl lg:text-3xl font-semibold">Family Planning (FP) Module</h3>
-                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                        <p class="text-gray-300 font-medium">Proactive Tracking and Counseling for Better Family Planning Outcomes</p>
+                        <p class="text-gray-400 font-light">The FP module helps ASHAs select, record, and follow up on contraceptive methods through visual aids and personalized timelines. With built-in reminders and resupply tracking, it supports continuity of care and reduces dropouts through timely, informed engagement.</p>
                     </div>
 
                     <div class="flex flex-col gap-4 lg:flex-row items-center">
@@ -998,18 +975,19 @@
                 </div>
             </div>
 
-            <!-- Sickle Cell Module -->
+            <!-- Sickle Cell Testing & Tracking -->
             <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-2">
-                        <h3 class="text-2xl lg:text-3xl font-semibold">ABHA ID Integration</h3>
-                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Sickle Cell Testing & Tracking</h3>
+                        <p class="text-gray-300 font-medium">Proactive Tracking and Counseling for Better Family Planning Outcomes</p>
+                        <p class="text-gray-400 font-light">The FP module helps ASHAs select, record, and follow up on contraceptive methods through visual aids and personalized timelines. With built-in reminders and resupply tracking, it supports continuity of care and reduces dropouts through timely, informed engagement.</p>
                     </div>
 
                     <div class="flex flex-col gap-4 lg:flex-row items-center">
                       <!-- Left: Project Image -->
                         <div class="w-1/2 lg:w-3/5 w-full lg:order-2">
-                            <img src="./images/chip2/feature_2_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                            <img src="./images/chip2/feature_6_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
                         </div>
                 
                       <!-- Right: Text Content -->
@@ -1045,7 +1023,8 @@
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-2">
                         <h3 class="text-2xl lg:text-3xl font-semibold">Profile – Facility, Geography & User</h3>
-                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                        <p class="text-gray-300 font-medium">Smart Profiles That Adapt to Roles, Locations, and Hierarchies</p>
+                        <p class="text-gray-400 font-light">This module manages accurate role-based user details, including facility and geographic mapping via QR scan. With support for multi-role logins, it streamlines access for rotating staff and ensures clean data for reporting and audits across locations.</p>
                     </div>
 
                     <div class="flex flex-col gap-4 lg:flex-row items-center">
@@ -1087,7 +1066,8 @@
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-2">
                         <h3 class="text-2xl lg:text-3xl font-semibold">Role-Based Homepages</h3>
-                        <p class="text-gray-400">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                        <p class="text-gray-300 font-medium">A Personalized Starting Point for Every User Role</p>
+                        <p class="text-gray-400 font-light">The role-based homepage adapts to each user’s responsibilities—showing only relevant tasks, alerts, and shortcuts. By minimizing clutter and prioritizing daily actions, it boosts focus, reduces errors, and encourages consistent, confident app use.</p>
                     </div>
 
                     <div class="flex flex-col gap-4 lg:flex-row items-center">
@@ -1238,16 +1218,16 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <!-- Project Reflection -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
                 <img src="./images/chip2/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
                 <p class="text-xl font-bold">Project Reflection</p>
-                <p class="text-gray-400">Designing for CHIP required creating a flexible-yet-controlled system that serves multiple user levels without overwhelming any of them. Understanding the working styles of ASHAs, ANMs, and MOs was key to building trust and usability into the app.</p>
+                <p class="text-gray-400 font-light mt-4">Designing for CHIP required creating a flexible-yet-controlled system that serves multiple user levels without overwhelming any of them. Understanding the working styles of ASHAs, ANMs, and MOs was key to building trust and usability into the app.</p>
             </div>
 
             <!-- Next Steps -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
                 <img src="./images/chip2/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
                 <p class="text-xl font-bold">Next Steps</p>
                 <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
@@ -1295,7 +1275,9 @@
             <div class="w-1/2 w-full px-6 pt-6 lg:order-1">
                 <h3 class="text-2xl md:text-3xl font-semibold mb-4">Project Title</h3>
                 <p class="text-gray-400 mb-6">A brief description of the project highlighting key features or design challenges solved in the process.</p>
-                <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300">View Details</a>
+                <a href="./anarock.html">
+                    <button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">View Details</button>
+                </a>
             </div>
       
           </div>
@@ -1303,12 +1285,12 @@
     </section>
 
     <!-- Bottom Bar -->
-    <div class="w-full flex flex-col gap-2 items-center py-16 bg-gray-950 mt-8">
-        <div class="flex flex-col text-center">
+    <div class="w-full flex flex-col gap-2 items-center py-16 px-3 bg-gray-950 mt-8">
+        <div class="flex flex-col text-center items-center">
             <p class="text-xl font-semibold m-2">Thank you for your interest in my work!</p>
-            <p class="m-2">Thank you for your interest in my work!</p>
+            <p class="bg-gray-900 px-4 py-2 rounded-xl inline-block w-max m-2"><a href="#" class="hover:text-amber-300 transition duration-500 ease-in-out">View Resume</a></p>
         </div>
-        <p class="text-gray-400 m-2">Made by Sumit Nikhare.  © 2024 Sumit Nikhare</p>
+        <p class="text-gray-400 m-2 text-center">Made by <a href="./about.html" class="hover:text-amber-300 transition duration-500 ease-in-out underline underline-offset-3">Sumit Nikhare</a>.  © 2024 Sumit Nikhare</p>
     </div>
 
     <!-- JS -->
@@ -1339,8 +1321,5 @@
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
         });
     </script>
-      
-    
-
 </body>
 </html>

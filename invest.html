@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+
+    <!--  -->
+    <style>
+    /* Add background animation */
+    @keyframes moveBg {
+        0% {
+        background-position: 0 0;
+        }
+        50% {
+        background-position: 0 10px;
+        }
+        100% {
+        background-position: 0 0;
+        }
+    }
+
+    .animated-bg {
+        animation: moveBg 5s ease-in-out infinite;
+    }
+
+    /* Transition for the navbar hide/show */
+    .navbar-transition {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-hidden {
+        transform: translateY(-100%);
+    }
+
+    @keyframes drawUnderline {
+    to {
+        stroke-dashoffset: 0;
+        }
+    }
+    </style>
+</head>
+
+<body class="bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%220.5%22%20fill%3D%22%23444%22%20/%3E%3C/svg%3E')] bg-fixed bg-repeat bg-gray-950 text-gray-200 flex flex-col gap-8 lg:gap-12 animated-bg">
+
+    <!-- Floating Action Button -->
+    <!-- <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 bg-gray-800 hover:bg-gray-700 text-white hover:text-amber-300 p-4 rounded-full shadow-lg transition duration-300 z-50 opacity-0 pointer-events-none">
+        <svg class="col" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+    </button> -->
+
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
+    class="fixed bottom-6 right-6 bg-gray-800 hover:bg-gray-700 text-white hover:text-amber-300 p-4 rounded-full shadow-lg transition duration-300 z-50 opacity-0 pointer-events-none group">
+    
+        <svg class="w-7 h-7 fill-current transition duration-300 group-hover:fill-amber-300" 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" 
+            fill="white">
+        <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
+        </svg>
+
+    </button>
+
+
+
+    <!-- Top Bar -->
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-gray-950 text-white p-4 shadow-lg z-50 navbar-transition">
+        <div class="flex flex-col gap-3 justify-between items-center">
+            <h1 class="text-2xl font-medium"><a href="./index.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">sumit.design</a></h1>
+            <nav>
+                <ul class="flex space-x-6">
+                <li><a href="./about.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">About me</a></li>
+                <li><a href="./index.html#projects" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Projects</a></li>
+                <li><a href="mailto:workspcae0105@gmai.com" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Hero -->
+    <div class="flex flex-col justify-center text-center h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <div>
+            <h1 class="text-3xl font-bold">Invest Application UI Casestudy</h1>
+            <h2 class="text-lg text-gray-400 mt-4">Streamlining Healthcare Operations at the Grassroots.</h2>
+        </div>
+        
+        <div class="lg:w-5/5 mt-4 lg:mx-auto">
+            <img src="./images/invest/invest_cover.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg lg:rounded-4xl" />
+        </div>
+    </div>
+
+
+    <!-- Project Overview -->
+    <div class="flex flex-col gap-6 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Project Overview</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+            <p class="text-gray-400 text-center lg:w-4/5">Invest App is a concept application designed to reduce gap and give exposure to Startup founders and Investors who are looking to invest fund in tomorrow. App helps investors user to find suitable Ideas/Startups to invest their fund and help them grow. Also upcoming Ideas/Startup gets chance to raise funds from investors to increase their growth.</p>
+        </div>
+
+        <!--  -->
+        <div class="flex flex-col gap-8 lg:flex-row bg-gray-900 rounded-3xl p-6 mx-4">
+            <div class="flex flex-col items-center w-full">
+                <p class="text-xl font-bold text-center">Project type: End-to-end app + branding</p>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="flex flex-col gap-8 lg:flex-row bg-gray-900 rounded-3xl p-6 mx-4">
+            <div class="flex flex-col items-center w-full">
+                <img src="./images/chip2/icons/industry.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                <p class="text-gray-400 text-center lg:w-4/5">Industry</p>
+                <p class="font-bold text-center mt-2">Public Health Digitalisation</p>
+            </div>
+
+            <div class="flex flex-col items-center w-full">
+                <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                <p class="text-gray-400 text-center lg:w-4/5">Tools</p>
+                <p class="font-bold text-center mt-2">Figma, FigJam, Jira, Confluence & Google Meet</p>
+            </div>
+
+            <div class="flex flex-col items-center w-full">
+                <img src="./images/chip2/icons/duration.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                <p class="text-gray-400 text-center lg:w-4/5">Duration</p>
+                <p class="font-bold text-center mt-2">Q3 2023</p>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="border-t-2 border-gray-800 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+    
+    <!-- Role & Responsibilities -->
+    <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <!-- Section Header -->
+        <div class="flex flex-col gap-8 justify-center items-center">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-3xl font-bold">Roles and Responsibilities</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+
+            <p class="text-gray-400 text-center">Led the entire design process across modules and user levels—translating complex workflows into intuitive, role-sensitive experiences.</p>
+
+            <div class="flex flex-wrap gap-2 items-center text-center justify-center">
+                <span class="py-4 px-8 bg-gray-800 rounded-full">UX Research</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Wireframing</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">UX Strategy</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Branding</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Visual Design</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Typography</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Motion Design</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Project Management</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Video Editing</span>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+
+    <!-- Problem Statement -->
+    <div class="flex flex-col gap-6 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Problem Statement</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+            <p class="text-gray-400 text-center lg:w-4/5">In a rapidly evolving digital landscape, organizations face challenges in maintaining visual consistency and user experience across multiple platforms and products. Existing design processes often lead to fragmented design elements, inefficient collaboration, and a lack of accessibility for both designers and developers. TARP aims to address these issues by providing a comprehensive design system that encompasses a cohesive set of guidelines, components, and best practices tailored for scalability and flexibility. By streamlining workflows and ensuring consistency in design and branding, TARP empowers teams to create intuitive, user-friendly interfaces that enhance overall user engagement and satisfaction.</p>
+        </div>
+    </div>
+
+    <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+
+    <!-- Research -->
+    <div class="flex flex-col gap-6 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-4">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Userflow</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+            <p class="text-gray-400 text-center mt-2 lg:w-4/5">The application's information architecture was redesigned based on user feedback and persona insights. The goal was to ensure that navigation was intuitive, and information was organized in a logical and accessible manner.</p>
+            
+            <div class="w-full mx-auto mt-4">
+                <img src="./images/samasta/userflow_1.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg shadow-md" />
+            </div>
+        </div>
+    </div>
+
+    <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+
+    <!-- Final Solution -->
+    <div class="flex flex-col gap-8 px-4">
+
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8 lg:w-3/5 lg:m-auto lg:px-0">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Flows and UI Designs</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+        </div>
+
+        <!-- Sub-section Header -->
+        <div class="flex flex-col gap-4 lg:w-3/5 lg:m-auto lg:px-0">
+            <div class="flex flex-col gap-2">
+                <p class="text-xl font-bold">Overview of the Final Design</p>
+            </div>
+            <p class="text-gray-400 font-light">The CHIP application was designed to be role-sensitive, offline-capable, and workflow-driven — addressing real-life needs of ASHAs, ANMs, CHOs, and PHC-level staff across rural healthcare settings.</p>
+
+            <ul class="list-disc list-inside text-gray-400 space-y-2 m1-4">
+                <li>Homepage and navigation auto-adjust based on the user's role and facility level.</li>
+                <li>Punch-IN reflects GPS and timestamp clearly.</li>
+                <li>RBAC implemented via user profile at login and governed across UI components.</li>
+            </ul>
+        </div>
+
+        <!-- UI Designs - section wise -->
+        <div class="grid grid-cols-1 gap-8 lg:w-3/5 lg:m-auto lg:px-0">
+
+            <!-- Onboarding -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Onboarding</h3>
+                        <p class="text-gray-400 font-light mt-3">The onboarding process introduces users to the app’s purpose and functionality, guiding both startup founders and potential investors through tailored experiences. For founders, the onboarding highlights steps to post their startup, while for investors, it explains how to browse and evaluate startups for funding. The design must ensure clarity, reduce friction, and set expectations, using a combination of visuals and short descriptions to ease users into the platform. Features like social login and quick-start guides could help reduce onboarding time and improve user retention.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/invest/ui-designs-1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Homepage -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Digital Visiting Card</h3>
+                        <p class="text-gray-400 font-light mt-3">The homepage serves as the primary interface for investors, presenting a curated list of startups seeking funding. Startups are displayed in a card-based or list format, each featuring key information such as the startup name, industry, funding progress, and a brief description. Investors can easily browse, filter, and search for startups based on categories such as industry, funding stage, or location.</p>
+                        <p class="text-gray-400 font-light">Each startup card provides a quick overview with the option to tap for more detailed information. Upon selection, users can view comprehensive startup profiles, including founders' details, pitch decks, current investors, and financial projections. The goal is to create a seamless, informative experience that encourages discovery and engagement, while offering startups the opportunity to showcase their potential.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/invest/ui-designs-2.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile -->
+            <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Profile</h3>
+                        <p class="text-gray-400 font-light mt-3">The profile section is essential for establishing credibility and trust within the app, allowing both investors and startup owners to showcase their backgrounds, expertise, and objectives. The investor profile provides a comprehensive view of their investment history, interests, and areas of expertise. It includes personal information such as the investor's name, profile picture, and a brief bio highlighting their professional background and investment philosophy. Additionally, the profile features a list of past investments, detailing the startup names, amounts invested, and the outcomes of those investments, as well as a section for preferred industries to aid in personalized startup recommendations. Connection options for direct messaging or scheduling meetings with startup owners promote networking and collaboration.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/invest/ui-designs-3.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+
+    <!-- Conclusion -->
+    <div class="flex flex-col gap-6 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Conclusion</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+
+            <p class="text-gray-400 text-center">Working on the HWC OPD management app was an insightful journey, allowing me to design a system that significantly improves healthcare service delivery in rural areas. By focusing on user-centered design, I created modules that simplify complex workflows for health workers and ensure better patient care through streamlined processes. Integrating queue management with the OPD workflow, inventory management, and outreach activities provided a comprehensive solution that caters to the diverse needs of health workers and administrative officials alike.</p>
+
+            <p class="text-gray-400 text-center">This project deepened my understanding of healthcare challenges in underserved areas and the role of efficient digital solutions in addressing them. The key takeaway was striking a balance between usability and functionality—designing for users with varying technical expertise while ensuring all critical operations are handled efficiently. The experience reinforced the importance of aligning technology with the needs of healthcare systems and inspired me to continue exploring ways to create impactful designs in the health sector.</p>
+
+        </div>
+    </div>
+
+
+    <!-- More Projects 1 -  -->
+    <section class="py-12 bg-gray-800">
+        <div class="lg:w-4/5 mx-auto px-3">
+          <div class="flex flex-col md:flex-row items-center">
+            
+            <!-- Left: Project Image -->
+            <div class="w-1/2 w-full lg:order-1">
+                <img src="./images/chip/chip cover.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+            </div>
+      
+            <!-- Right: Text Content -->
+            <div class="w-1/2 w-full px-6 pt-6 lg:order-2">
+                <h3 class="text-2xl md:text-3xl font-semibold mb-4">Project Title</h3>
+                <p class="text-gray-400 mb-6">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300">View Details</a>
+            </div>
+      
+          </div>
+        </div>
+    </section>
+
+    <!-- More Projects 2 -  -->
+    <section class="py-12 bg-gray-800">
+        <div class="lg:w-4/5 mx-auto px-3">
+          <div class="flex flex-col md:flex-row items-center">
+            
+            <!-- Left: Project Image -->
+            <div class="w-1/2 w-full lg:order-2">
+                <img src="./images/chip/chip cover.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+            </div>
+      
+            <!-- Right: Text Content -->
+            <div class="w-1/2 w-full px-6 pt-6 lg:order-1">
+                <h3 class="text-2xl md:text-3xl font-semibold mb-4">Project Title</h3>
+                <p class="text-gray-400 mb-6">A brief description of the project highlighting key features or design challenges solved in the process.</p>
+                <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300">View Details</a>
+            </div>
+      
+          </div>
+        </div>
+    </section>
+
+    <!-- Bottom Bar -->
+    <div class="w-full flex flex-col gap-2 items-center py-16 bg-gray-950 mt-8">
+        <div class="flex flex-col text-center">
+            <p class="text-xl font-semibold m-2">Thank you for your interest in my work!</p>
+            <p class="m-2">Thank you for your interest in my work!</p>
+        </div>
+        <p class="text-gray-400 m-2">Made by Sumit Nikhare.  © 2024 Sumit Nikhare</p>
+    </div>
+
+    <!-- JS -->
+    <script>
+        const fab = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            fab.classList.remove('opacity-0', 'pointer-events-none');
+          } else {
+            fab.classList.add('opacity-0', 'pointer-events-none');
+          }
+        });
+
+        // Hiding and showing the navbar on scroll
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function () {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            navbar.classList.add('navbar-hidden');
+        } else {
+            // Scrolling up
+            navbar.classList.remove('navbar-hidden');
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+        });
+    </script>
+      
+    
+
+</body>
+</html>

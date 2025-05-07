@@ -80,7 +80,7 @@
     <div class="flex flex-col justify-center text-center h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0">
         <div>
             <h1 class="text-3xl font-bold">Invest Application UI Casestudy</h1>
-            <h2 class="text-lg text-gray-400 mt-4">Streamlining Healthcare Operations at the Grassroots.</h2>
+            <h2 class="text-lg text-gray-400 mt-4">Bridging Founders and Funders for the Startups of Tomorrow.</h2>
         </div>
         
         <div class="lg:w-5/5 mt-4 lg:mx-auto">
@@ -112,13 +112,13 @@
             <div class="flex flex-col items-center w-full">
                 <img src="./images/chip2/icons/industry.svg" alt="Logo" class="w-12 h-auto mb-4"/>
                 <p class="text-gray-400 text-center lg:w-4/5">Industry</p>
-                <p class="font-bold text-center mt-2">Public Health Digitalisation</p>
+                <p class="font-bold text-center mt-2">Fintech / Investment</p>
             </div>
 
             <div class="flex flex-col items-center w-full">
                 <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
                 <p class="text-gray-400 text-center lg:w-4/5">Tools</p>
-                <p class="font-bold text-center mt-2">Figma, FigJam, Jira, Confluence & Google Meet</p>
+                <p class="font-bold text-center mt-2">Figma, FigJam, Clickup & Google Meet</p>
             </div>
 
             <div class="flex flex-col items-center w-full">
@@ -167,26 +167,9 @@
                 <p class="text-2xl font-bold">Problem Statement</p>
                 <div class="border-b-4 border-yellow-400 w-16"></div>
             </div>
-            <p class="text-gray-400 text-center lg:w-4/5">In a rapidly evolving digital landscape, organizations face challenges in maintaining visual consistency and user experience across multiple platforms and products. Existing design processes often lead to fragmented design elements, inefficient collaboration, and a lack of accessibility for both designers and developers. TARP aims to address these issues by providing a comprehensive design system that encompasses a cohesive set of guidelines, components, and best practices tailored for scalability and flexibility. By streamlining workflows and ensuring consistency in design and branding, TARP empowers teams to create intuitive, user-friendly interfaces that enhance overall user engagement and satisfaction.</p>
-        </div>
-    </div>
+            <p class="text-gray-400 text-center lg:w-4/5">Startups often face significant challenges in securing the funding they need to scale, while potential investors struggle to find emerging ventures that align with their interests and investment goals. The current landscape lacks a centralized, user-friendly platform that connects startups seeking funding with investors looking for new opportunities. Startups need a seamless way to present their ideas, progress, and funding requirements, while investors require an intuitive interface to discover, evaluate, and invest in promising ventures.</p>
+            <p class="text-gray-400 text-center lg:w-4/5">The goal of this project is to design an app that bridges this gap, allowing startups to easily post their projects for potential investors to see, and enabling investors to browse, evaluate, and invest in various startups from a single platform. The design should focus on a streamlined user experience, transparency, and fostering trust between both parties.</p>
 
-    <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
-
-    <!-- Research -->
-    <div class="flex flex-col gap-6 px-4 lg:w-3/5 lg:m-auto lg:px-0">
-
-        <!-- Section Header -->
-        <div class="flex flex-col items-center gap-4">
-            <div class="flex flex-col gap-2 items-center">
-                <p class="text-2xl font-bold">Userflow</p>
-                <div class="border-b-4 border-yellow-400 w-16"></div>
-            </div>
-            <p class="text-gray-400 text-center mt-2 lg:w-4/5">The application's information architecture was redesigned based on user feedback and persona insights. The goal was to ensure that navigation was intuitive, and information was organized in a logical and accessible manner.</p>
-            
-            <div class="w-full mx-auto mt-4">
-                <img src="./images/samasta/userflow_1.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg shadow-md" />
-            </div>
         </div>
     </div>
 
@@ -208,12 +191,15 @@
             <div class="flex flex-col gap-2">
                 <p class="text-xl font-bold">Overview of the Final Design</p>
             </div>
-            <p class="text-gray-400 font-light">The CHIP application was designed to be role-sensitive, offline-capable, and workflow-driven — addressing real-life needs of ASHAs, ANMs, CHOs, and PHC-level staff across rural healthcare settings.</p>
+            <p class="text-gray-400 font-light">The app is designed to offer a role-based, user-friendly experience for startup founders and investors, ensuring clarity and engagement.</p>
 
             <ul class="list-disc list-inside text-gray-400 space-y-2 m1-4">
-                <li>Homepage and navigation auto-adjust based on the user's role and facility level.</li>
-                <li>Punch-IN reflects GPS and timestamp clearly.</li>
-                <li>RBAC implemented via user profile at login and governed across UI components.</li>
+                <li>Onboarding: Tailored for founders and investors, with social login and quick-start guides to reduce friction.</li>
+                <li>Homepage: Auto-adjusts based on user role, presenting curated lists for investors and management tools for founders.</li>
+                <li>Startup Cards: Investors can view key details and access full startup profiles with financial data and pitch decks.</li>
+                <li>Profile Section: Comprehensive profiles for both investors and founders, with networking features like direct messaging and meeting scheduling.</li>
+                <li>RBAC: Role-based access ensures users only see relevant information, maintaining security and personalization.</li>
+
             </ul>
         </div>
 
@@ -238,7 +224,7 @@
             <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-2">
-                        <h3 class="text-2xl lg:text-3xl font-semibold">Digital Visiting Card</h3>
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Homepage</h3>
                         <p class="text-gray-400 font-light mt-3">The homepage serves as the primary interface for investors, presenting a curated list of startups seeking funding. Startups are displayed in a card-based or list format, each featuring key information such as the startup name, industry, funding progress, and a brief description. Investors can easily browse, filter, and search for startups based on categories such as industry, funding stage, or location.</p>
                         <p class="text-gray-400 font-light">Each startup card provides a quick overview with the option to tap for more detailed information. Upon selection, users can view comprehensive startup profiles, including founders' details, pitch decks, current investors, and financial projections. The goal is to create a seamless, informative experience that encourages discovery and engagement, while offering startups the opportunity to showcase their potential.</p>
 

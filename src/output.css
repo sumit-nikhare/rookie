@@ -3211,3 +3211,7 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-contain-x {
+  syntax: "*";
+  inherits: false;
+}

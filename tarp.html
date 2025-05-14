@@ -1,0 +1,523 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+
+    <!--  -->
+    <style>
+    /* Add background animation */
+    @keyframes moveBg {
+        0% {
+        background-position: 0 0;
+        }
+        50% {
+        background-position: 0 10px;
+        }
+        100% {
+        background-position: 0 0;
+        }
+    }
+
+    .animated-bg {
+        animation: moveBg 5s ease-in-out infinite;
+    }
+
+    /* Transition for the navbar hide/show */
+    .navbar-transition {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-hidden {
+        transform: translateY(-100%);
+    }
+
+    @keyframes drawUnderline {
+    to {
+        stroke-dashoffset: 0;
+        }
+    }
+    </style>
+</head>
+
+<body class="bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%220.5%22%20fill%3D%22%23444%22%20/%3E%3C/svg%3E')] bg-fixed bg-repeat bg-gray-950 text-gray-200 flex flex-col gap-8 lg:gap-12 animated-bg font-light">
+
+    <!-- Floating Action Button -->
+    <!-- <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 bg-gray-800 hover:bg-gray-700 text-white hover:text-amber-300 p-4 rounded-full shadow-lg transition duration-300 z-50 opacity-0 pointer-events-none">
+        <svg class="col" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+    </button> -->
+
+    <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
+    class="fixed bottom-6 right-6 bg-gray-800 hover:bg-gray-700 text-white hover:text-amber-300 p-4 rounded-full shadow-lg transition duration-300 z-50 opacity-0 pointer-events-none group">
+    
+        <svg class="w-7 h-7 fill-current transition duration-300 group-hover:fill-amber-300" 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" 
+            fill="white">
+        <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
+        </svg>
+
+    </button>
+
+
+
+    <!-- Top Bar -->
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-gray-950 text-white p-4 shadow-lg z-50 navbar-transition">
+        <div class="flex flex-col gap-2 justify-between items-center">
+            <h1 class="text-2xl font-medium">
+                <a href="./index.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">sumit.design</a>
+            </h1>
+            <nav class="flex gap-6">
+                <a href="./about.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">About me</a>
+                <a href="./index.html#projects" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Projects</a>
+                <a href="mailto:workspace0105@gmail.com" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Hero -->
+    <div class="flex flex-col justify-center text-center h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <div>
+            <h1 class="text-3xl font-bold">TARP Design System</h1>
+            <h2 class="text-lg text-gray-400 mt-4">A Unified Platform for Property Listings, CRM, and Commission Management.</h2>
+        </div>
+        
+        <div class="lg:w-5/5 mt-4 lg:mx-auto">
+            <img src="./images/tarp/tarp_cover.png" alt="Descriptive alt text" class="w-full h-auto rounded-lg lg:rounded-4xl" />
+        </div>
+    </div>
+
+
+    <!-- Project Overview -->
+    <div class="flex flex-col gap-6 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Project Overview</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+            <p class="text-gray-400 text-center lg:w-4/5">TARP Component Library was designed as a part of startup to create aglie software in Permute Solutions Pvt. Ltd. Few components are shown below to demonstrate the UI perspective of TARP. Tarp uses the grid system to create complete pages design, so all the components are created accordingly.</p>
+        </div>
+
+        <!--  -->
+        <div class="flex flex-col gap-8 lg:flex-row bg-gray-900 rounded-3xl p-6 mx-4">
+            <div class="flex flex-col items-center w-full">
+                <p class="text-xl font-bold text-center">Project type: Component Library + branding</p>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="flex flex-col gap-8 lg:flex-row bg-gray-900 rounded-3xl p-6 mx-4">
+            <div class="flex flex-col items-center w-full">
+                <img src="./images/chip2/icons/industry.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                <p class="text-gray-400 text-center lg:w-4/5">Industry</p>
+                <p class="font-bold text-center mt-2">UI Design System</p>
+            </div>
+
+            <div class="flex flex-col items-center w-full">
+                <img src="./images/chip/demo_svg.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                <p class="text-gray-400 text-center lg:w-4/5">Tools</p>
+                <p class="font-bold text-center mt-2">Figma, FigJam, Clickup & Google Meet</p>
+            </div>
+
+            <div class="flex flex-col items-center w-full">
+                <img src="./images/chip2/icons/duration.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                <p class="text-gray-400 text-center lg:w-4/5">Duration</p>
+                <p class="font-bold text-center mt-2">3 Months</p>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="border-t-2 border-gray-800 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+    
+    <!-- Role & Responsibilities -->
+    <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <!-- Section Header -->
+        <div class="flex flex-col gap-8 justify-center items-center">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-3xl font-bold">Roles and Responsibilities</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+
+            <p class="text-gray-400 text-center">Led the entire design process across modules and user levels—translating complex workflows into intuitive, role-sensitive experiences.</p>
+
+            <div class="flex flex-wrap gap-2 items-center text-center justify-center">
+                <span class="py-4 px-8 bg-gray-800 rounded-full">UX Research</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Wireframing</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">UX Strategy</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Branding</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Visual Design</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Typography</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Motion Design</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Project Management</span>
+                <span class="py-4 px-8 bg-gray-800 rounded-full">Video Editing</span>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+
+    <!-- Problem Statement -->
+    <div class="flex flex-col gap-6 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Problem Statement</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+            <!-- <p class="text-gray-400 text-center lg:w-4/5">Led the entire design process across modules and user levels—translating complex workflows into intuitive, role-sensitive experiences.</p> -->
+        </div>
+
+        <div class="grid grid-cols-1 gap-4">
+            <!-- Context & Background -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <img src="./images/chip2/icons/context.svg" alt="Logo" class="w-12 h-auto"/>
+                <p class="text-xl font-bold mt-4">Context & Background</p>
+                <p class="text-gray-400 mt-4">The real estate sector relies heavily on Channel Partners (CPs), yet their workflows remain outdated and fragmented. Anarock recognized the need for a unified digital solution to enhance efficiency, trust, and scalability for both individual brokers and organizations.</p>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                    <li>CPs traditionally use scattered tools and offline methods to manage clients, listings, and commissions.</li>
+                    <li>These manual processes result in inefficiencies, lost opportunities, and a lack of professional credibility.</li>
+                    <li>There’s no single platform tailored to the complete journey of a CP—from onboarding to post-sale finance tracking.</li>
+                    <li>Clients often hesitate to trust brokers due to unverified credentials and inconsistent communication.</li>
+                    <li>Anarock aimed to bridge this gap by introducing a mobile-first platform to streamline and professionalize CP operations.</li>
+                </ul>
+            </div>
+
+            <!-- User Needs & Business Goals -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <img src="./images/chip2/icons/business.svg" alt="Logo" class="w-12 h-auto"/>
+                <p class="text-xl font-bold mt-4">User Needs & Business Goals</p>
+
+                <p class="text-gray-400 mt-4">To ensure the platform serves both Channel Partners and the business effectively, it was essential to align user needs with strategic business goals. The design focuses on solving day-to-day broker challenges while supporting Anarock's vision for scalable growth and trust-driven sales.</p>
+
+                <p class="mt-4"><b class="text-gray-200 font-semibold">User Needs:</b></p>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-2">
+                    <li>A simple onboarding flow for both individual CPs and organizations, including verification (e.g., RERA details).</li>
+                    <li>A trusted identity tool (Digital Visiting Card) to build credibility with clients.</li>
+                    <li>An easy-to-use system to browse, filter, and share property listings with clients.</li>
+                    <li>A centralized space to manage leads, track client progress, and monitor commissions.</li>
+                </ul>
+
+                <p class="mt-8"><b class="text-gray-200 font-semibold">Business Goals:</b></p>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-2">
+                    <li>Digitize the broker ecosystem to increase sales efficiency and reduce lead leakage.</li>
+                    <li>Promote verified CPs to build trust and strengthen Anarock’s brand reputation.</li>
+                    <li>Provide CPs with incentives like early commissions to encourage engagement and loyalty.</li>
+                    <li>Enable scalability by supporting both individual and organizational users within one platform..</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+
+    <!-- Components -->
+    <div class="flex flex-col gap-8 px-4">
+
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8 lg:w-3/5 lg:m-auto lg:px-0">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">Components</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+        </div>
+
+        <!-- UI Designs - section wise -->
+        <div class="grid grid-cols-1 gap-8 lg:w-3/5 lg:m-auto lg:px-0">
+
+            <!-- Matrics -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Matrics</h3>
+                        <p class="text-gray-400 font-light">Metric is quantitative data that you collect & analyze and, hopefully, make better decisions based on this analysis.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/tarp/metrics.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Table -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Data Table</h3>
+                        <p class="text-gray-400 font-light">Data tables display information in a grid-like format of rows and columns. They organize information in a way that's easy to scan so that users can look for patterns and develop insights from data.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/tarp/tables.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Side Navigation -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Side Navigation</h3>
+                        <p class="text-gray-400 font-light">Side navigation lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/tarp/side nav.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Filters</h3>
+                        <p class="text-gray-400 font-light">Filters provide a set of controls to reduce items in a collection based on attributes the user is interested in (e.g., filtering items by creation date). Filters can provide the following functionality: A list of interesting attributes common to items in a collection, and possible values to filter by.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/tarp/Filters.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- List -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">List</h3>
+                        <p class="text-gray-400 font-light">Lists in web/mobile app UI design are galleries of text, images, or card options that can help users choose one or more options to achieve their goals effortlessly. Many common elements such as drop-down menus, list boxes, checkboxes, and radio button groups are typical examples of list UI design.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/tarp/list.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promotion/Helper Box -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Promotion/Helper Box</h3>
+                        <p class="text-gray-400 font-light">Lists in web/mobile app UI design are galleries of text, images, or card options that can help users choose one or more options to achieve their goals effortlessly. Many common elements such as drop-down menus, list boxes, checkboxes, and radio button groups are typical examples of list UI design.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/tarp/promotion.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promotion/Helper Box -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Articles</h3>
+                        <p class="text-gray-400 font-light">Aritcle page is the collection of article of similar type, segregated by categories.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/tarp/articles.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+
+    <!-- UI Designs -->
+    <div class="flex flex-col gap-8 px-4">
+
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8 lg:w-3/5 lg:m-auto lg:px-0">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">UI Designs/Screens</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+        </div>
+
+        <!-- UI Screens -->
+        <div class="grid grid-cols-1 gap-8 lg:w-3/5 lg:m-auto lg:px-0">
+
+            <!-- Screen 1 -  -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Screen 1 - </h3>
+                        <p class="text-gray-400 font-light">Metric is quantitative data that you collect & analyze and, hopefully, make better decisions based on this analysis.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/tarp/screen_1.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screen 2 - -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Screen 2 - </h3>
+                        <p class="text-gray-400 font-light">Data tables display information in a grid-like format of rows and columns. They organize information in a way that's easy to scan so that users can look for patterns and develop insights from data.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/tarp/screen_2.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screen 3 - -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Screen 3 - </h3>
+                        <p class="text-gray-400 font-light">Side navigation lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/tarp/screen_3.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screen 4 - -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Screen 4 - </h3>
+                        <p class="text-gray-400 font-light">Filters provide a set of controls to reduce items in a collection based on attributes the user is interested in (e.g., filtering items by creation date). Filters can provide the following functionality: A list of interesting attributes common to items in a collection, and possible values to filter by.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/tarp/screen_4.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screen 5 - -->
+            <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Screen 5 - </h3>
+                        <p class="text-gray-400 font-light">Lists in web/mobile app UI design are galleries of text, images, or card options that can help users choose one or more options to achieve their goals effortlessly. Many common elements such as drop-down menus, list boxes, checkboxes, and radio button groups are typical examples of list UI design.</p>
+
+                        <div class="w-full mt-4">
+                            <img src="./images/tarp/screen_5.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+
+    <!-- More Projects -->
+    <div class="flex flex-col gap-6 px-4 lg:w-3/5 lg:m-auto lg:px-0">
+
+        <!-- Section Header -->
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col gap-2 items-center">
+                <p class="text-2xl font-bold">More Projects</p>
+                <div class="border-b-4 border-yellow-400 w-16"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- More Projects 1 -  -->
+    <section class="py-12 bg-gray-900">
+        <div class="lg:w-4/5 mx-auto px-3">
+            <div class="flex flex-col md:flex-row items-center">
+                
+                <!-- Left: Project Image -->
+                <div class="w-1/2 w-full lg:order-1">
+                    <img src="./images/chip2/chip2.0_cover.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                </div>
+        
+                <!-- Right: Text Content -->
+                <div class="w-1/2 w-full px-6 pt-6 lg:order-2">
+                    <h3 class="text-2xl md:text-3xl font-semibold mb-4">Community Health Integrated Platform (CHIP) 2.0</h3>
+                    <p class="text-gray-400 mb-6">The Community Health Integrated Platform (CHIP) is an Android app for ASHA workers and ANMs, designed to streamline health record management and reduce paper dependency. I contributed to enhancing the Khushi Baby health app by integrating features like RMNCH+A coverage and ABHA integration. User research guided the interface design, ensuring it met healthcare workers' needs. Continuous testing confirmed that the app effectively improves maternal and child health outcomes in underserved areas.</p>
+                    <a href="./project-1.html">
+                        <button class="bg-gray-800 text-white hover:text-amber-300 font-medium py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">View Details</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Projects 2 -  -->
+    <section class="py-12 bg-gray-900">
+        <div class="lg:w-4/5 mx-auto px-3">
+            <div class="flex flex-col md:flex-row items-center">
+                
+                <!-- Left: Project Image -->
+                <div class="w-1/2 w-full lg:order-2">
+                    <img src="./images/anarock/anarock_cover.png" alt="Project screenshot" class="w-full h-auto object-cover rounded-xl lg:rounded-3xl"/>
+                </div>
+        
+                <!-- Right: Text Content -->
+                <div class="w-1/2 w-full px-6 pt-6 lg:order-1">
+                    <h3 class="text-2xl md:text-3xl font-semibold mb-4">Anarock Channel Partner Application</h3>
+                    <p class="text-gray-400 mb-6">Anarock is a B2B Platform for channel partners(Property Brokers) to view listing of properties and sell them to clients. App allows CPs to manage all their clients with the help of CRM which is inbuild in the app and also after selling the property CPs can manage all the finance proceeding in the app itself with the help of CM(Commission Management).</p>
+                    <a href="./anarock.html">
+                        <button class="bg-gray-800 text-white hover:text-amber-300 font-medium py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">View Details</button>
+                    </a>
+                </div>
+        
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Bar -->
+    <div class="w-full flex flex-col gap-2 items-center py-16 px-3 bg-gray-950 mt-8 border-t-2 border-gray-800">
+        <div class="flex flex-col text-center items-center">
+            <p class="text-xl font-semibold m-2">Thank you for your interest in my work!</p>
+            <p class="bg-gray-900 px-4 py-2 rounded-xl inline-block w-max m-2"><a href="#" class="hover:text-amber-300 transition duration-500 ease-in-out">View Resume</a></p>
+        </div>
+        <p class="text-gray-400 m-2 text-center">Made by <a href="./about.html" class="hover:text-amber-300 transition duration-500 ease-in-out underline underline-offset-3">Sumit Nikhare</a>.  © 2024 Sumit Nikhare</p>
+    </div>
+
+    <!-- JS -->
+    <script>
+        const fab = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            fab.classList.remove('opacity-0', 'pointer-events-none');
+          } else {
+            fab.classList.add('opacity-0', 'pointer-events-none');
+          }
+        });
+
+        // Hiding and showing the navbar on scroll
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function () {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            navbar.classList.add('navbar-hidden');
+        } else {
+            // Scrolling up
+            navbar.classList.remove('navbar-hidden');
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+        });
+    </script>
+      
+    
+
+</body>
+</html>

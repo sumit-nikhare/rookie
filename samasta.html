@@ -41,7 +41,7 @@
     </style>
 </head>
 
-<body class="bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%220.5%22%20fill%3D%22%23444%22%20/%3E%3C/svg%3E')] bg-fixed bg-repeat bg-gray-950 text-gray-200 flex flex-col gap-8 lg:gap-12 animated-bg">
+<body class="bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%220.5%22%20fill%3D%22%23444%22%20/%3E%3C/svg%3E')] bg-fixed bg-repeat bg-gray-950 text-gray-200 flex flex-col gap-8 lg:gap-12 animated-bg font-light">
 
     <!-- Floating Action Button -->
     <!-- <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 bg-gray-800 hover:bg-gray-700 text-white hover:text-amber-300 p-4 rounded-full shadow-lg transition duration-300 z-50 opacity-0 pointer-events-none">
@@ -64,14 +64,14 @@
 
     <!-- Top Bar -->
     <header id="navbar" class="fixed top-0 left-0 w-full bg-gray-950 text-white p-4 shadow-lg z-50 navbar-transition">
-        <div class="flex flex-col gap-3 justify-between items-center">
-            <h1 class="text-2xl font-medium"><a href="./index.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">sumit.design</a></h1>
-            <nav>
-                <ul class="flex space-x-6">
-                <li><a href="./about.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">About me</a></li>
-                <li><a href="#" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Projects</a></li>
-                <li><a href="mailto:workspcae0105@gmai.com" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Contact</a></li>
-                </ul>
+        <div class="flex flex-col gap-2 justify-between items-center">
+            <h1 class="text-2xl font-medium">
+                <a href="./index.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">sumit.design</a>
+            </h1>
+            <nav class="flex gap-6">
+                <a href="./about.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">About me</a>
+                <a href="./index.html#projects" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Projects</a>
+                <a href="mailto:workspace0105@gmail.com" class="text-white hover:text-amber-300 py-2 transition-all duration-300">Contact</a>
             </nav>
         </div>
     </header>
@@ -80,7 +80,7 @@
     <div class="flex flex-col justify-center text-center h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0">
         <div>
             <h1 class="text-3xl font-bold">Samasta Application & Dashboard</h1>
-            <h2 class="text-lg text-gray-400 mt-4">Streamlining Healthcare Operations at the Grassroots.</h2>
+            <h2 class="text-lg text-gray-400 mt-4">Transforming Primary Healthcare Delivery with Digital Efficiency and Data-Driven Insights</h2>
         </div>
         
         <div class="lg:w-5/5 mt-4 lg:mx-auto">
@@ -134,7 +134,7 @@
             <div class="flex flex-col items-center w-full">
                 <img src="./images/chip2/icons/duration.svg" alt="Logo" class="w-12 h-auto mb-4"/>
                 <p class="text-gray-400 text-center lg:w-4/5">Duration</p>
-                <p class="font-bold text-center mt-2">Q3 2023</p>
+                <p class="font-bold text-center mt-2">May 23 - Feb 24</p>
             </div>
         </div>
 
@@ -162,7 +162,6 @@
                 <span class="py-4 px-8 bg-gray-800 rounded-full">Typography</span>
                 <span class="py-4 px-8 bg-gray-800 rounded-full">Motion Design</span>
                 <span class="py-4 px-8 bg-gray-800 rounded-full">Project Management</span>
-                <span class="py-4 px-8 bg-gray-800 rounded-full">Video Editing</span>
             </div>
         </div>
     </div>
@@ -177,7 +176,7 @@
                 <p class="text-2xl font-bold">Problem Statement</p>
                 <div class="border-b-4 border-yellow-400 w-16"></div>
             </div>
-            <p class="text-gray-400 text-center lg:w-4/5">Led the entire design process across modules and user levels—translating complex workflows into intuitive, role-sensitive experiences.</p>
+            <p class="text-gray-400 text-center lg:w-4/5">Primary healthcare facilities often struggle with manual processes, unstructured patient flow, and fragmented data systems. These issues lead to long wait times, inconsistent patient records, stock mismanagement, and poor visibility into community outreach efforts. Higher-level officials face challenges in accessing real-time data, monitoring health trends, and making informed decisions due to the lack of integrated reporting and oversight tools.</p>
         </div>
 
         <div class="grid grid-cols-1 gap-4">
@@ -185,23 +184,30 @@
             <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
                 <img src="./images/chip2/icons/context.svg" alt="Logo" class="w-12 h-auto"/>
                 <p class="text-xl font-bold mt-4">Context & Background</p>
-                <p class="text-gray-400 mt-4">CHIP is accessed by healthcare workers across a <b class="text-gray-200">three-tiered hierarchy:</b></p>
-                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
-                <li><b class="text-gray-200">Village Level:</b> ASHA workers</li>
-                <li><b class="text-gray-200">Sub-Health Center (SHC) Level:</b> ANMs and CHOs</li>
-                <li><b class="text-gray-200">Primary Health Center (PHC) Level:</b> Medical Officers (MOs), Staff Nurses, Pharmacists, and Lab Technicians</li>
-                </ul>
-                <p class="text-gray-400 mt-4">To maintain data integrity and workflow clarity, the app is governed by a <b class="text-gray-200">Role-Based Access Control (RBAC) System</b>, which ensures that each user only accesses relevant modules and permissions based on their designation and facility level.</p>
+                <p class="text-gray-400 mt-4">In many government health facilities, especially at the PHC and sub-center level, service delivery is burdened by manual workflows, paper-based record-keeping, and fragmented systems. These inefficiencies lead to long wait times, poor tracking of patient care, delayed interventions, and frequent shortages of essential medicines. Additionally, field activities such as immunization drives and follow-ups often go undocumented or are tracked inconsistently. The absence of real-time insights also hinders program planning at the district or state level.</p>
             </div>
 
             <!-- User Needs & Business Goals -->
             <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
                 <img src="./images/chip2/icons/business.svg" alt="Logo" class="w-12 h-auto"/>
                 <p class="text-xl font-bold mt-4">User Needs & Business Goals</p>
-                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
-                    <li>Field users needed <b class="text-gray-200">streamlined workflows</b> tailored to their daily tasks.</li>
-                    <li>Supervisors required <b class="text-gray-200">visibility into data</b> across levels without clutter.</li>
-                    <li>Khushi Baby NGO aimed to <b class="text-gray-200">ensure security, accuracy, and hierarchy alignment</b> across users.</li>
+
+                <p class="mt-4"><b class="text-gray-200 font-semibold">User Needs:</b></p>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-2">
+                    <li>Health workers require a streamlined way to manage patient queues, reduce bottlenecks, and ensure smooth service transitions across OPD, lab, and pharmacy.</li>
+                    <li>ANMs and ASHAs need tools to register patients quickly, maintain accurate records, and plan outreach visits efficiently.</li>
+                    <li>Pharmacists and store managers need up-to-date stock information and alerts to avoid medicine shortages.</li>
+                    <li>Medical Officers need visibility into patient flow, medicine use, and disease trends to make timely decisions.</li>
+                    <li>Program managers and higher officials require aggregated data to monitor facility performance and guide policy interventions.</li>
+                </ul>
+
+                <p class="mt-8"><b class="text-gray-200 font-semibold">Business Goals:</b></p>
+                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-2">
+                    <li>Digitize health service workflows to improve operational efficiency and data accuracy.</li>
+                    <li>Reduce patient wait times and optimize resource usage.</li>
+                    <li>Ensure continuous availability of essential medicines and supplies.</li>
+                    <li>Strengthen accountability in community outreach activities.</li>
+                    <li>Enable data-driven planning and performance monitoring across health programs.</li>
                 </ul>
             </div>
         </div>
@@ -244,12 +250,14 @@
             <div class="flex flex-col gap-2">
                 <p class="text-xl font-bold">Overview of the Final Design</p>
             </div>
-            <p class="text-gray-400">The CHIP application was designed to be role-sensitive, offline-capable, and workflow-driven — addressing real-life needs of ASHAs, ANMs, CHOs, and PHC-level staff across rural healthcare settings.</p>
+            <p class="text-gray-400">The final design of Samasta is a modular digital health system tailored for Primary Health Centers (PHCs), aiming to enhance the delivery and monitoring of outpatient services. The solution includes five key modules—Out <b class="text-gray-200">Patient Department (OPD), Inventory Management, Patient Registration, Outreach Activity, and Dashboard</b>—each optimized to support health workers and officials in delivering timely, efficient, and data-driven care.</p>
 
             <ul class="list-disc list-inside text-gray-400 space-y-2 m1-4">
-                <li>Homepage and navigation auto-adjust based on the user's role and facility level.</li>
-                <li>Punch-IN reflects GPS and timestamp clearly.</li>
-                <li>RBAC implemented via user profile at login and governed across UI components.</li>
+                <li>The OPD module integrates queue management and patient tracking to streamline the entire consultation and treatment workflow.</li>
+                <li>Inventory Management ensures uninterrupted availability of medicines and equipment through real-time stock updates and automated restocking alerts.</li>
+                <li>The Patient Registration system simplifies intake with autofill forms and Aadhaar integration for faster verifications.</li>
+                <li>The Outreach Activity module helps plan, log, and follow up on community-based health programs.</li>
+                <li>Finally, a centralized Dashboard enables higher officials to monitor service delivery, analyze trends, and make informed decisions for resource planning.</li>
             </ul>
         </div>
 
@@ -288,7 +296,7 @@
             <div class="flex flex-col bg-gray-900 rounded-xl lg:rounded-3xl p-3 lg:p-6">
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-2">
-                        <h3 class="text-2xl lg:text-3xl font-semibold">Inventory Management</h3>
+                        <h3 class="text-2xl lg:text-3xl font-semibold">Patient Registration</h3>
                         <p class="text-gray-400">Streamlines patient intake by allowing health workers to efficiently capture patient details, demographic information, and medical history. This module offers a user-friendly form with auto-fill features, reducing data entry time and ensuring accuracy. Integrated with Aadhaar and other identification systems for quick verifications.</p>
 
                         <div class="w-full mt-4">
@@ -327,67 +335,6 @@
             </div>
 
         </div>
-
-        <!-- Summary of System-Wide Benefits -->
-        <div class="flex flex-col gap-4 lg:w-3/5 lg:m-auto lg:px-0">
-            <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-2">
-                    <p class="text-xl font-bold">Summary of System-Wide Benefits</p>
-                </div>
-            </div>
-
-            <div class="overflow-x-auto">
-                <div class="border border-gray-300 rounded-2xl shadow-sm overflow-hidden">
-                  <table class="min-w-full border-collapse">
-                    <thead>
-                      <tr class="bg-gray-100">
-                        <th class="text-left p-4 text-gray-700 font-semibold text-lg border-b">Feature</th>
-                        <th class="text-left p-4 text-gray-700 font-semibold text-lg border-b">Description</th>
-                      </tr>
-                    </thead>
-                    <tbody class="text-gray-400 text-base">
-                      <tr class="border-b">
-                        <td class="p-4">Usability</td>
-                        <td class="p-4">Designed for low-literacy, first-time digital users</td>
-                      </tr>
-                      <tr class="border-b">
-                        <td class="p-4">Offline Support</td>
-                        <td class="p-4">All critical functions work offline with smart sync handling</td>
-                      </tr>
-                      <tr class="border-b">
-                        <td class="p-4">Security & Access</td>
-                        <td class="p-4">Fine-grained control through RBAC</td>
-                      </tr>
-                      <tr class="border-b">
-                        <td class="p-4">Data Quality</td>
-                        <td class="p-4">Real-time validation, skip logic, and progressive save enhance accuracy</td>
-                      </tr>
-                      <tr>
-                        <td class="p-4">Scalability</td>
-                        <td class="p-4">Modules designed to plug-and-play across health programs and states</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-            </div>
-              
-        </div>
-
-        <!-- Technical & Accessibility Considerations -->
-        <div class="flex flex-col gap-4 lg:w-3/5 lg:m-auto lg:px-0">
-            <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-2">
-                    <p class="text-xl font-bold">Technical & Accessibility Considerations</p>
-                </div>
-                <ul class="list-disc list-inside text-gray-400 space-y-2 m1-4">
-                    <li>Homepage and navigation auto-adjust based on the user's role and facility level.</li>
-                    <li>Punch-IN reflects GPS and timestamp clearly.</li>
-                    <li>RBAC implemented via user profile at login and governed across UI components.</li>
-                </ul>
-            </div>
-        </div>
-        
-          
     </div>
 
     <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">

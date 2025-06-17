@@ -7,69 +7,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!--  -->
     <style>
-    /* Add background animation */
-    @keyframes moveBg {
-        0% {
-        background-position: 0 0;
-        }
-        50% {
-        background-position: 0 10px;
-        }
-        100% {
-        background-position: 0 0;
-        }
+    /* Modern background animation */
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
     }
 
-    .animated-bg {
-        animation: moveBg 5s ease-in-out infinite;
+    .gradient-bg {
+        background: linear-gradient(-45deg, #050505, #0a0a0a, #050505, #0a0a0a);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
     }
 
-    /* Transition for the navbar hide/show */
+    /* Smooth transitions */
     .navbar-transition {
-        transition: transform 0.3s ease-in-out;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .navbar-hidden {
         transform: translateY(-100%);
     }
 
-    /* for role animation */
-    @keyframes fadeInOut {
-      0%, 100% { opacity: 0; }
-      10%, 30% { opacity: 1; }
-      40%, 100% { opacity: 0; }
+    /* Modern card hover effects */
+    .experience-card {
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .fade-text-1 {
-      animation: fadeInOut 9s infinite;
-      animation-delay: 0s;
+    .experience-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border-color: rgba(234, 179, 8, 0.3);
     }
 
-    .fade-text-2 {
-      animation: fadeInOut 9s infinite;
-      animation-delay: 3s;
-    }
-
-    .fade-text-3 {
-      animation: fadeInOut 9s infinite;
-      animation-delay: 6s;
-    }
-
+    /* Animated underline */
     @keyframes drawUnderline {
         to {
             stroke-dashoffset: 0;
         }
     }
+
+    /* Skill tag hover effect */
+    .skill-tag {
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .skill-tag:hover {
+        transform: translateY(-2px);
+        border-color: rgba(234, 179, 8, 0.3);
+        box-shadow: 0 5px 15px rgba(234, 179, 8, 0.1);
+    }
+
+    /* Modern button styles */
+    .modern-button {
+        background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+        border: 1px solid rgba(234, 179, 8, 0.2);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .modern-button:hover {
+        background: linear-gradient(45deg, #2a2a2a, #3a3a3a);
+        border-color: rgba(234, 179, 8, 0.4);
+        transform: translateY(-1px);
+        box-shadow: 0 5px 15px rgba(234, 179, 8, 0.1);
+    }
+
+    .modern-button:active {
+        transform: translateY(0);
+    }
+
+    /* Custom heading styles */
+    .heading-primary {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+    }
+
+    .heading-secondary {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+    }
+
+    /* Fade-in animation for sections */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    /* Scroll progress indicator */
+    .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: linear-gradient(to right, #eab308, #fcd34d);
+        z-index: 1000;
+        transition: width 0.1s ease;
+    }
     </style>
 </head>
 
-<body class="bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%220.5%22%20fill%3D%22%23444%22%20/%3E%3C/svg%3E')] bg-fixed bg-repeat bg-gray-950 text-gray-200 flex flex-col gap-8 lg:gap-12 animated-bg font-light">
+<body class="gradient-bg text-gray-200 flex flex-col gap-8 lg:gap-12 font-light">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
     <!-- Top Bar -->
-    <header id="navbar" class="fixed top-0 left-0 w-full bg-gray-950 text-white p-4 shadow-lg z-50 navbar-transition">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-[#0a0a0a]/80 backdrop-blur-md text-white p-4 shadow-lg z-50 navbar-transition">
         <div class="flex flex-col gap-2 justify-between items-center">
             <h1 class="text-2xl font-medium">
                 <a href="./index.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">sumit.design</a>
@@ -83,100 +140,85 @@
     </header>
 
     <!-- Hero -->
-    <div class="flex flex-col gap-8 justify-center items-center text-center h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0">
-        <div>
-            <h1 class="text-3xl font-medium">Get to know more about me.</h1>
-            <h2 class="font-light text-gray-400 mt-10">I’m Sumit, a UI/UX Designer with 3.3 years of experience creating user-first digital products that balance function and form. From healthcare platforms to enterprise tools, I’ve crafted experiences that make complex systems feel intuitive. My approach blends thoughtful design, usability principles, and a strong grasp of user needs to deliver solutions that truly work.</h2>
-            <h2 class="font-light text-gray-400 mt-4">With skills in Figma, HTML/CSS, and design thinking, I thrive in collaborative environments where creativity meets clarity. I’m driven by curiosity, precision, and the belief that great design solves real problems—quietly, effectively, and with just the right amount of flair.</h2>
+    <div class="flex flex-col gap-8 justify-center items-center text-center min-h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0 fade-in">
+        <div class="relative">
+            <h1 class="text-4xl md:text-5xl font-bold mb-8 heading-primary">Get to know more about me.</h1>
+            <h2 class="font-light text-gray-400 mt-10 leading-relaxed">I'm Sumit, a UI/UX Designer with 3.3 years of experience creating user-first digital products that balance function and form. From healthcare platforms to enterprise tools, I've crafted experiences that make complex systems feel intuitive. My approach blends thoughtful design, usability principles, and a strong grasp of user needs to deliver solutions that truly work.</h2>
+            <h2 class="font-light text-gray-400 mt-4 leading-relaxed">With skills in Figma, HTML/CSS, and design thinking, I thrive in collaborative environments where creativity meets clarity. I'm driven by curiosity, precision, and the belief that great design solves real problems—quietly, effectively, and with just the right amount of flair.</h2>
         </div>
         
-        <a href="https://drive.google.com/file/d/1CtltZkOelElah7Tzy9kSwZ1F75ozBLiJ/view?usp=sharing"><button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">View Resume</button></a>
+        <a href="https://drive.google.com/file/d/1CtltZkOelElah7Tzy9kSwZ1F75ozBLiJ/view?usp=sharing">
+            <button class="modern-button text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max">View Resume</button>
+        </a>
     </div>
 
     <div class="flex flex-col gap-16">
-        <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+        <hr class="border-t border-gray-800 mx-4 my-8 lg:w-3/5 lg:mx-auto">
 
         <!-- Skills -->
-        <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0">
-            <!-- Section Header -->
+        <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0 fade-in">
             <div class="flex flex-col gap-8">
                 <div class="flex flex-col gap-2">
-                    <p class="text-2xl font-bold">Skills</p>
+                    <p class="text-3xl font-bold heading-primary">Skills</p>
                     <div class="border-b-4 border-yellow-400 w-16"></div>
                 </div>
 
-                <p class="text-gray-400">A versatile design toolkit combining user research, interaction design, visual aesthetics, and front-end execution to build thoughtful, user-centered products.</p>
+                <p class="text-gray-400 text-lg">A versatile design toolkit combining user research, interaction design, visual aesthetics, and front-end execution to build thoughtful, user-centered products.</p>
 
-                <!-- <div class="flex flex-wrap gap-2">
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">UX Research</span>
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">Wireframing</span>
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">UX Strategy</span>
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">Branding</span>
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">Visual Design</span>
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">Typography</span>
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">Motion Design</span>
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">Project Management</span>
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">Video Editing</span>
-                </div> -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-900/50 p-6 rounded-xl backdrop-blur-sm">
+                        <p class="font-medium text-yellow-400 mb-3">Core UX/UI Skills</p>
+                        <p class="text-gray-300">User research, UX strategy, Wireframing, Journey mapping, Information architecture, Heuristic evaluation, Usability testing, A/B testing</p>
+                    </div>
 
-                <div class="flex flex-col gap-2">
-                    <p class="font-medium text-yellow-400">Core UX/UI Skills</p>
-                    <p class="text-gray-300 font-semibold text-xl">User research, UX strategy, Wireframing, Journey mapping, Information architecture, Heuristic evaluation, Usability testing, A/B testing</p>
-                </div>
+                    <div class="bg-gray-900/50 p-6 rounded-xl backdrop-blur-sm">
+                        <p class="font-medium text-yellow-400 mb-3">UI & Visual Design</p>
+                        <p class="text-gray-300">Proficient in visual design, typography, branding, interaction design, design systems, and motion design.</p>
+                    </div>
 
-                <div class="flex flex-col gap-2">
-                    <p class="font-medium text-yellow-400">UI & Visual Design</p>
-                    <p class="text-xl text-gray-300">Proficient in visual design, typography, branding, interaction design, design systems, and motion design.</p>
-                </div>
+                    <div class="bg-gray-900/50 p-6 rounded-xl backdrop-blur-sm">
+                        <p class="font-medium text-yellow-400 mb-3">Tools & Software</p>
+                        <p class="text-gray-300">Experienced with Figma, Sketch, InVision, Adobe Illustrator, Adobe After Effects, and Chrome DevTools.</p>
+                    </div>
 
-                <div class="flex flex-col gap-2">
-                    <p class="font-medium text-yellow-400">Tools & Software</p>
-                    <p class="text-xl text-gray-300">Experienced with Figma, Sketch, InVision, Adobe Illustrator, Adobe After Effects, and Chrome DevTools.</p>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                    <p class="font-medium text-yellow-400">Front-End & Development</p>
-                    <p class="text-xl text-gray-300">Comfortable working with HTML5, CSS3, TailwindCSS, Bootstrap, and Android (Relay Plugin).</p>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                    <p class="font-medium text-yellow-400">Collaboration & Process</p>
-                    <p class="text-xl text-gray-300">Strong understanding of design thinking, agile methodologies, project management, cross-functional collaboration, and data-driven decision-making using tools like Asana.</p>
+                    <div class="bg-gray-900/50 p-6 rounded-xl backdrop-blur-sm">
+                        <p class="font-medium text-yellow-400 mb-3">Front-End & Development</p>
+                        <p class="text-gray-300">Comfortable working with HTML5, CSS3, TailwindCSS, Bootstrap, and Android (Relay Plugin).</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+        <hr class="border-t border-gray-800 mx-4 my-8 lg:w-3/5 lg:mx-auto">
 
         <!-- Experience -->
-        <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0">
-            <!-- Section Header -->
+        <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0 fade-in">
             <div class="flex flex-col gap-8">
                 <div class="flex flex-col gap-2">
-                    <p class="text-2xl font-bold">Experience</p>
+                    <p class="text-3xl font-bold heading-primary">Experience</p>
                     <div class="border-b-4 border-yellow-400 w-16"></div>
                 </div>
 
-                <p class="text-gray-400">A track record of collaborating across teams to craft impactful design solutions, backed by research, strategy, and iteration.</p>
+                <p class="text-gray-400 text-lg">A track record of collaborating across teams to craft impactful design solutions, backed by research, strategy, and iteration.</p>
 
                 <section class="py-4 text-white w-full">
-                    <div class="mx-auto">
-                        <!-- Experience - Khushibaby -->
-                        <div class="mb-6 border border-gray-800 rounded-xl overflow-hidden">
-                            <button onclick="toggleExperience(this)" class="w-full flex justify-between items-center px-6 py-4 bg-gray-900 hover:bg-gray-800 transition-all">
-                            <div class="flex flex-col gap-1 text-left">
-                                <p class="text-sm text-yellow-400">Khushi Baby (Non-Profit NGO)</p>
-                                <h3 class="text-lg font-semibold">UI/UX Designer - L3</h3>
-                                <p class="text-sm text-gray-400">Jan 2023 - Present</p>
-                            </div>
-                            <span class="text-2xl transform transition-transform">&#x25BC;</span>
+                    <div class="mx-auto space-y-6">
+                        <!-- Experience cards with modern styling -->
+                        <div class="experience-card bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden">
+                            <button onclick="toggleExperience(this)" class="w-full flex justify-between items-center px-6 py-4 hover:bg-gray-800/50 transition-all">
+                                <div class="flex flex-col gap-1 text-left">
+                                    <p class="text-sm text-yellow-400">Khushi Baby (Non-Profit NGO)</p>
+                                    <h3 class="text-lg font-semibold">UI/UX Designer - L3</h3>
+                                    <p class="text-sm text-gray-400">Jan 2023 - Present</p>
+                                </div>
+                                <span class="text-2xl transform transition-transform">&#x25BC;</span>
                             </button>
                             <div class="experience-details hidden px-6 py-4 text-gray-400">
-                                <p>Led end-to-end design for impactful healthcare solutions, including , <b class="text-gray-200">CHIP V2.0</b> (Khushi Baby NGO) and Karnataka’s <b class="text-gray-200">Samasta App</b>, serving 10,000+ frontline workers.</p>
+                                <p>Led end-to-end design for impactful healthcare solutions, including , <b class="text-gray-200">CHIP V2.0</b> (Khushi Baby NGO) and Karnataka's <b class="text-gray-200">Samasta App</b>, serving 10,000+ frontline workers.</p>
 
                                 <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
                                     <li>CHIP V2.0: Redesigned ASHA/ANM mobile interfaces for <b class="text-gray-200">RMNCH+A, TB screening, and MCHN along with approvals</b>, boosting engagement via streamlined onboarding. Integrated <b class="text-gray-200">ABDM-ABHA</b> workflows, ensuring certification compliance.</li>
-                                    <li>Samasta App: Directed UI/UX for Karnataka’s HWC digitization, covering <b class="text-gray-200">OPD, EMR, inventory along with dashboards</b> for officials. Cut administrative delays by 30%.</li>
+                                    <li>Samasta App: Directed UI/UX for Karnataka's HWC digitization, covering <b class="text-gray-200">OPD, EMR, inventory along with dashboards</b> for officials. Cut administrative delays by 30%.</li>
                                     <li>User-Centric Approach: Conducted field research with health workers, prototyping intuitive flows in Figma. Collaborated with dev teams for seamless implementation.</li>
                                 </ul>
 
@@ -186,125 +228,142 @@
                         </div>
 
                         <!-- Experience - Permute Solutions Pvt. Ltd. -->
-                        <div class="mb-6 border border-gray-800 rounded-xl overflow-hidden">
-                            <button onclick="toggleExperience(this)" class="w-full flex justify-between items-center px-6 py-4 bg-gray-900 hover:bg-gray-800 transition-all">
-                            <div class="flex flex-col gap-1 text-left">
-                                <p class="text-sm text-yellow-400">Permute Solutions Pvt. Ltd.</p>
-                                <h3 class="text-lg font-semibold">Associate UI/UX Designer</h3>
-                                <p class="text-sm text-gray-400">Mar 2022 - Dec 2022</p>
-                            </div>
-                            <span class="text-2xl transform transition-transform">&#x25BC;</span>
+                        <div class="experience-card bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden">
+                            <button onclick="toggleExperience(this)" class="w-full flex justify-between items-center px-6 py-4 hover:bg-gray-800/50 transition-all">
+                                <div class="flex flex-col gap-1 text-left">
+                                    <p class="text-sm text-yellow-400">Permute Solutions Pvt. Ltd.</p>
+                                    <h3 class="text-lg font-semibold">Associate UI/UX Designer</h3>
+                                    <p class="text-sm text-gray-400">Mar 2022 - Dec 2022</p>
+                                </div>
+                                <span class="text-2xl transform transition-transform">&#x25BC;</span>
                             </button>
                             <div class="experience-details hidden px-6 py-4 text-gray-400">
-                            <p>Established Design Component Libraries for Anarock's digital assets and TARP Agile Platform, ensuring brand consistency and efficiency. Translated complex workflows into userflows, facilitating communication between teams. Orchestrated handoff processes for accurate implementation. Executed branding initiatives for Permute, designing collateral and crafting engaging social media posts for LinkedIn to effectively communicate brand identity.</p>
+                                <p>Established Design Component Libraries for Anarock's digital assets and TARP Agile Platform, ensuring brand consistency and efficiency.</p>
+
+                                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                                    <li>Anarock: Developed comprehensive <b class="text-gray-200">Design Component Libraries</b> for digital assets, ensuring consistent brand identity across platforms.</li>
+                                    <li>TARP Agile Platform: Created <b class="text-gray-200">user flows and wireframes</b> for complex workflows, facilitating clear communication between design and development teams.</li>
+                                    <li>Brand Development: Led <b class="text-gray-200">branding initiatives</b> for Permute, designing collateral and crafting engaging social media posts for LinkedIn to effectively communicate brand identity.</li>
+                                </ul>
+
+                                <p>Expertise: <b class="text-gray-200">Figma, Design Systems, Brand Strategy.</b> Focused on creating scalable design solutions.</p>
                             </div>
                         </div>
 
                         <!-- Experience - Reddway.In -->
-                        <div class="mb-6 border border-gray-800 rounded-xl overflow-hidden">
-                            <button onclick="toggleExperience(this)" class="w-full flex justify-between items-center px-6 py-4 bg-gray-900 hover:bg-gray-800 transition-all">
-                            <div class="flex flex-col gap-1 text-left">
-                                <p class="text-sm text-yellow-400">Reddway.In</p>
-                                <h3 class="text-lg font-semibold">UI/UX Design Intern</h3>
-                                <p class="text-sm text-gray-400">May 2021 - Jul 2021</p>
-                            </div>
-                            <span class="text-2xl transform transition-transform">&#x25BC;</span>
+                        <div class="experience-card bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden">
+                            <button onclick="toggleExperience(this)" class="w-full flex justify-between items-center px-6 py-4 hover:bg-gray-800/50 transition-all">
+                                <div class="flex flex-col gap-1 text-left">
+                                    <p class="text-sm text-yellow-400">Reddway.In</p>
+                                    <h3 class="text-lg font-semibold">UI/UX Design Intern</h3>
+                                    <p class="text-sm text-gray-400">May 2021 - Jul 2021</p>
+                                </div>
+                                <span class="text-2xl transform transition-transform">&#x25BC;</span>
                             </button>
                             <div class="experience-details hidden px-6 py-4 text-gray-400">
-                            <p>Designed and developed promotional, confirmation, and alert emails to ensure brand consistency and effective communication. Implemented UI/UX for order fulfillment, emphasizing usability and efficiency. Crafted intuitive designs for the Seller Dashboard, offering clear insights and tools for effective account and product management.</p>
+                                <p>Contributed to email marketing and seller dashboard design, focusing on user experience and brand consistency.</p>
+
+                                <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                                    <li>Email Design: Created <b class="text-gray-200">promotional, confirmation, and alert emails</b> with consistent branding and clear call-to-actions.</li>
+                                    <li>Order Fulfillment: Designed <b class="text-gray-200">intuitive interfaces</b> for order management, streamlining the fulfillment process.</li>
+                                    <li>Seller Dashboard: Developed <b class="text-gray-200">user-friendly dashboards</b> with clear insights and tools for effective account and product management.</li>
+                                </ul>
+
+                                <p>Expertise: <b class="text-gray-200">Email Design, Dashboard UI, User Flows.</b> Passionate about creating intuitive user experiences.</p>
                             </div>
                         </div>
 
                     </div>
                 </section>
-                
-                
-                
             </div>
         </div>
 
-        <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+        <hr class="border-t border-gray-800 mx-4 my-8 lg:w-3/5 lg:mx-auto">
 
-        <!-- Education -->
-        <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0">
-            <!-- Section Header -->
+        <!-- Education section with modern styling -->
+        <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0 fade-in">
             <div class="flex flex-col gap-8">
                 <div class="flex flex-col gap-2">
-                    <p class="text-3xl font-bold">Education</p>
+                    <p class="text-3xl font-bold heading-primary">Education</p>
                     <div class="border-b-4 border-yellow-400 w-16"></div>
                 </div>
 
-                <p class="text-gray-400">Formal education in design principles, human behavior, and digital technologies, forming a strong base for user-focused problem-solving.</p>
+                <p class="text-gray-400 text-lg">Formal education in design principles, human behavior, and digital technologies, forming a strong base for user-focused problem-solving.</p>
 
-                <div class="flex flex-col gap-8 lg:flex-row bg-gray-900 rounded-3xl p-6 mx-4 w-full">
-                    <div class="flex flex-col items-center w-full">
-                        <img src="./images/chip2/icons/industry.svg" alt="Logo" class="w-12 h-auto mb-4"/>
-                        <p class="font-bold text-center mt-2">12th Standard</p>
-                        <p class="text-gray-400 text-center lg:w-4/5">Macro Vision Academy</p>
-                        <p class="font-bold text-center mt-2">8.4 CGPA</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-900/50 p-6 rounded-xl backdrop-blur-sm">
+                        <div class="flex flex-col items-center">
+                            <img src="./images/chip2/icons/industry.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                            <p class="font-bold text-center mt-2">12th Standard</p>
+                            <p class="text-gray-400 text-center">Macro Vision Academy</p>
+                            <p class="font-bold text-center mt-2">8.4 CGPA</p>
+                        </div>
                     </div>
-        
-                    <div class="flex flex-col items-center w-full">
-                        <img src="./images/chip2/icons/industry.svg" alt="Logo" class="w-12 h-auto mb-4"/>
-                        <p class="font-bold text-center mt-2">B.Tech</p>
-                        <p class="text-gray-400 text-center lg:w-4/5">Shri Guru Gobind Singhji Institute of Engineering and Technology</p>
-                        <p class="font-bold text-center mt-2">7.8 CG</p>
+
+                    <div class="bg-gray-900/50 p-6 rounded-xl backdrop-blur-sm">
+                        <div class="flex flex-col items-center">
+                            <img src="./images/chip2/icons/industry.svg" alt="Logo" class="w-12 h-auto mb-4"/>
+                            <p class="font-bold text-center mt-2">B.Tech</p>
+                            <p class="text-gray-400 text-center">Shri Guru Gobind Singhji Institute of Engineering and Technology</p>
+                            <p class="font-bold text-center mt-2">7.8 CG</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <hr class="border-t-2 border-gray-700 mx-4 my-8 lg:w-3/5 lg:mx-auto">
+        <hr class="border-t border-gray-800 mx-4 my-8 lg:w-3/5 lg:mx-auto">
 
-        <!-- Aside from design ... -->
-        <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0">
-            <!-- Section Header -->
+        <!-- Interests section with modern styling -->
+        <div class="flex flex-col gap-12 px-4 lg:w-3/5 lg:m-auto lg:px-0 fade-in">
             <div class="flex flex-col gap-8">
                 <div class="flex flex-col gap-2">
-                    <p class="text-3xl font-bold">Aside from design...</p>
+                    <p class="text-3xl font-bold heading-primary">Aside from design...</p>
                     <div class="border-b-4 border-yellow-400 w-16"></div>
                 </div>
 
-                <p class="text-gray-400">A curious mind beyond the interface—exploring art, storytelling, human behavior, and slow living practices that fuel my creativity and deepen my empathy.</p>
+                <p class="text-gray-400 text-lg">A curious mind beyond the interface—exploring art, storytelling, human behavior, and slow living practices that fuel my creativity and deepen my empathy.</p>
 
-                <div class="flex flex-wrap gap-2">
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">Storytelling</span>
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">Anime & Visual Culture</span>
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">Journaling</span>
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">Systems Thinking</span>
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">Sketching or Doodling</span>
-                    <span class="py-4 px-8 bg-gray-800 rounded-full">Nature & Observing People</span>
+                <div class="flex flex-wrap gap-4">
+                    <span class="skill-tag py-3 px-6 bg-gray-900/50 rounded-full">Storytelling</span>
+                    <span class="skill-tag py-3 px-6 bg-gray-900/50 rounded-full">Anime & Visual Culture</span>
+                    <span class="skill-tag py-3 px-6 bg-gray-900/50 rounded-full">Journaling</span>
+                    <span class="skill-tag py-3 px-6 bg-gray-900/50 rounded-full">Systems Thinking</span>
+                    <span class="skill-tag py-3 px-6 bg-gray-900/50 rounded-full">Sketching or Doodling</span>
+                    <span class="skill-tag py-3 px-6 bg-gray-900/50 rounded-full">Nature & Observing People</span>
                 </div>
             </div>
         </div>
     </div>
 
-    
-
-    <!-- Contact me -->
-    <div class="flex flex-col gap-2 justify-center items-center text-center h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0">
-        <p class="text-4xl font-semibold text-center">Interested in 
-            <span class="inline-block text-amber-300 relative pb-3">
-                <span class="relative z-10">collaboration?</span>
-                <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="absolute bottom-0 left-0 w-full h-3 z-0">
-                  <path d="M0,5 Q50,0 100,5" fill="none" stroke="#fcd34d" stroke-width="3"
-                    stroke-dasharray="100"
-                    stroke-dashoffset="100"
-                    style="animation: drawUnderline 1s ease forwards;"></path>
-                </svg>
-            </span>
-        </p>
-        <p class="text-xl mt-4 text-center">Let's discuss what we can create together.</p>
-        <button class="bg-gray-800 text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max mt-2">Let's Connect!!!</button>
+    <!-- Contact section with modern styling -->
+    <div class="flex flex-col gap-2 justify-center items-center text-center min-h-screen px-4 lg:w-3/5 lg:m-auto lg:px-0 fade-in">
+        <div class="relative">
+            <p class="text-4xl font-semibold text-center">Interested in 
+                <span class="inline-block text-amber-300 relative pb-3">
+                    <span class="relative z-10">collaboration?</span>
+                    <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="absolute bottom-0 left-0 w-full h-3 z-0">
+                        <path d="M0,5 Q50,0 100,5" fill="none" stroke="#fcd34d" stroke-width="3"
+                            stroke-dasharray="100"
+                            stroke-dashoffset="100"
+                            style="animation: drawUnderline 1s ease forwards;"></path>
+                    </svg>
+                </span>
+            </p>
+            <p class="text-xl mt-4 text-center">Let's discuss what we can create together.</p>
+            <button class="modern-button text-white hover:text-amber-300 font-semibold py-4 px-8 rounded-full transition duration-500 ease-in-out inline-block w-max mt-6">Let's Connect!!!</button>
+        </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="w-full flex flex-col gap-2 items-center py-16 px-3 bg-gray-950 mt-8">
+    <!-- Bottom Bar with modern styling -->
+    <div class="w-full flex flex-col gap-2 items-center py-16 px-3 bg-gray-950/80 backdrop-blur-md mt-8">
         <div class="flex flex-col text-center items-center">
             <p class="text-xl font-semibold m-2">Thank you for your interest!</p>
-            <p class="bg-gray-900 px-4 py-2 rounded-xl inline-block w-max m-2"><a href="https://drive.google.com/file/d/1CtltZkOelElah7Tzy9kSwZ1F75ozBLiJ/view?usp=sharing" class="hover:text-amber-300 transition duration-500 ease-in-out">View Resume</a></p>
+            <p class="bg-gray-900/50 px-4 py-2 rounded-xl inline-block w-max m-2 backdrop-blur-sm">
+                <a href="https://drive.google.com/file/d/1CtltZkOelElah7Tzy9kSwZ1F75ozBLiJ/view?usp=sharing" class="hover:text-amber-300 transition duration-500 ease-in-out">View Resume</a>
+            </p>
         </div>
-        <p class="text-gray-400 m-2 text-center">Made by <a href="./about.html" class="hover:text-amber-300 transition duration-500 ease-in-out underline underline-offset-3">Sumit Nikhare</a>.  © 2024 Sumit Nikhare</p>
+        <p class="text-gray-400 m-2 text-center">Made by <a href="./about.html" class="hover:text-amber-300 transition duration-500 ease-in-out underline underline-offset-3">Sumit Nikhare</a>. © 2024 Sumit Nikhare</p>
     </div>
 
     <!-- JS -->
@@ -315,7 +374,6 @@
             details.classList.toggle('hidden');
             icon.classList.toggle('rotate-180');
         }
-
 
         const fab = document.getElementById('backToTop');
         window.addEventListener('scroll', () => {
@@ -343,10 +401,32 @@
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
         });
 
-        
-    </script>
-      
-    
+        // Add scroll progress indicator
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scrollProgress").style.width = scrolled + "%";
+        });
 
+        // Add fade-in animation for sections
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, .fade-in').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>

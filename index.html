@@ -15,26 +15,22 @@
 
     <!--  -->
     <style>
-    /* Add background animation */
-    @keyframes moveBg {
-        0% {
-        background-position: 0 0;
-        }
-        50% {
-        background-position: 0 10px;
-        }
-        100% {
-        background-position: 0 0;
-        }
+    /* Modern background animation */
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
     }
 
-    .animated-bg {
-        animation: moveBg 5s ease-in-out infinite;
+    .gradient-bg {
+        background: linear-gradient(-45deg, #050505, #0a0a0a, #050505, #0a0a0a);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
     }
 
     /* Transition for the navbar hide/show */
     .navbar-transition {
-        transition: transform 0.3s ease-in-out;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .navbar-hidden {
@@ -142,13 +138,11 @@
     </style>
 </head>
 
-<body class="bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%220.5%22%20fill%3D%22%23444%22%20/%3E%3C/svg%3E')] bg-fixed bg-repeat bg-gray-950 text-gray-200 flex flex-col gap-8 lg:gap-12 animated-bg scroll-smooth font-light">
-    <!-- Floating Action Button -->
-    <!-- <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 bg-gray-800 hover:bg-gray-700 text-white hover:text-amber-300 p-4 rounded-full shadow-lg transition duration-300 z-50 opacity-0 pointer-events-none">
-        <svg class="col" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
-    </button> -->
+<body class="gradient-bg text-gray-200 flex flex-col gap-8 lg:gap-12 font-light">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
-    <header id="navbar" class="fixed top-0 left-0 w-full bg-gray-950 text-white p-4 shadow-lg z-50 navbar-transition">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-[#0a0a0a]/80 backdrop-blur-md text-white p-4 shadow-lg z-50 navbar-transition">
         <div class="flex flex-col gap-2 justify-between items-center">
           <h1 class="text-2xl font-medium">
             <a href="./index.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">sumit.design</a>
@@ -214,7 +208,7 @@
             </div>
 
             <!-- Project"1 - CHIP 2.0 -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-3 lg:p-6 project-card">
+            <div class="flex flex-col bg-gray-900/50 backdrop-blur-sm rounded-3xl p-3 lg:p-6 project-card">
                 <div class="flex flex-col lg:flex-row items-center">
                     <!-- Left: Project Image -->
                     <div class="w-1/2 w-full lg:order-1">
@@ -235,7 +229,7 @@
             </div>
 
             <!-- Project"2 - Samasta -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-3 lg:p-6 project-card">
+            <div class="flex flex-col bg-gray-900/50 backdrop-blur-sm rounded-3xl p-3 lg:p-6 project-card">
                 <div class="flex flex-col gap-2 lg:flex-row items-center">
                     <!-- Left: Project Image -->
                     <div class="w-1/2 w-full lg:order-2">
@@ -269,7 +263,7 @@
             </div>
 
             <!-- Project"1 - Anarock Channel Partner Application -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-3 lg:p-6 project-card">
+            <div class="flex flex-col bg-gray-900/50 backdrop-blur-sm rounded-3xl p-3 lg:p-6 project-card">
                 <div class="flex flex-col gap-2 lg:flex-row items-center">
                     <!-- Left: Project Image -->
                     <div class="w-1/2 w-full lg:order-1">
@@ -291,7 +285,7 @@
             </div>
 
             <!-- Project"2 - TARP Design System -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-3 lg:p-6 project-card">
+            <div class="flex flex-col bg-gray-900/50 backdrop-blur-sm rounded-3xl p-3 lg:p-6 project-card">
                 <div class="flex flex-col gap-2 lg:flex-row items-center">
                     <!-- Left: Project Image -->
                     <div class="w-1/2 w-full lg:order-2">
@@ -330,7 +324,7 @@
             </div>
 
             <!-- Project"1 - Invest Application UI Casestudy -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-3 lg:p-6 project-card">
+            <div class="flex flex-col bg-gray-900/50 backdrop-blur-sm rounded-3xl p-3 lg:p-6 project-card">
                 <div class="flex flex-col gap-2 lg:flex-row items-center">
                     <!-- Left: Project Image -->
                     <div class="w-1/2 w-full lg:order-1">
@@ -351,7 +345,7 @@
             </div>
 
             <!-- Project"2 - UX Animation -->
-            <div class="flex flex-col bg-gray-900 rounded-3xl p-3 lg:p-6 project-card">
+            <div class="flex flex-col bg-gray-900/50 backdrop-blur-sm rounded-3xl p-3 lg:p-6 project-card">
                 <div class="flex flex-col gap-2 lg:flex-row items-center">
                     <!-- Left: Project Image -->
                     <div class="w-1/2 w-full lg:order-2">

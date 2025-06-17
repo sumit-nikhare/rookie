@@ -7,44 +7,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!--  -->
     <style>
-    /* Add background animation */
-    @keyframes moveBg {
-        0% {
-        background-position: 0 0;
-        }
-        50% {
-        background-position: 0 10px;
-        }
-        100% {
-        background-position: 0 0;
-        }
+    /* Modern background animation */
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
     }
 
-    .animated-bg {
-        animation: moveBg 5s ease-in-out infinite;
+    .gradient-bg {
+        background: linear-gradient(-45deg, #050505, #0a0a0a, #050505, #0a0a0a);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
     }
 
-    /* Transition for the navbar hide/show */
+    /* Smooth transitions */
     .navbar-transition {
-        transition: transform 0.3s ease-in-out;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .navbar-hidden {
         transform: translateY(-100%);
     }
 
-    @keyframes drawUnderline {
-    to {
-        stroke-dashoffset: 0;
-        }
+    /* Custom heading styles */
+    .heading-primary {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+    }
+
+    .heading-secondary {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+    }
+
+    /* Progress bar styles */
+    .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: linear-gradient(to right, #eab308, #fcd34d);
+        z-index: 1000;
+        transition: width 0.1s ease;
     }
     </style>
 </head>
 
-<body class="bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%220.5%22%20fill%3D%22%23444%22%20/%3E%3C/svg%3E')] bg-fixed bg-repeat bg-gray-950 text-gray-200 flex flex-col gap-8 lg:gap-12 animated-bg font-light">
+<body class="gradient-bg text-gray-200 flex flex-col gap-8 lg:gap-12 font-light">
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
 
     <!-- Floating Action Button -->
     <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
@@ -59,10 +78,18 @@
 
     </button>
 
-
+    <script>
+        // Progress bar functionality
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        });
+    </script>
 
     <!-- Top Bar -->
-    <header id="navbar" class="fixed top-0 left-0 w-full bg-gray-950 text-white p-4 shadow-lg z-50 navbar-transition">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-[#0a0a0a]/80 backdrop-blur-md text-white p-4 shadow-lg z-50 navbar-transition">
         <div class="flex flex-col gap-2 justify-between items-center">
           <h1 class="text-2xl font-medium">
             <a href="./index.html" class="text-white hover:text-amber-300 py-2 transition-all duration-300">sumit.design</a>
@@ -296,7 +323,7 @@
             <div class="flex flex-col bg-gray-900 rounded-3xl p-6">
                 <img src="./images/icons/user-shadow.svg" alt="Logo" class="w-12 h-auto mb-4"/>
                 <p class="text-xl font-bold">Contextual Inquiry</p>
-                <p class="text-gray-400 mt-4">While users performed tasks like DHS entry or Punch-IN, I asked them to “think aloud” to capture their natural workflow, hesitation points, and expectations.</p>
+                <p class="text-gray-400 mt-4">While users performed tasks like DHS entry or Punch-IN, I asked them to "think aloud" to capture their natural workflow, hesitation points, and expectations.</p>
                 <p class="text-gray-400 mt-4">This was especially helpful in identifying:</p>
                 <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
                     <li>Confusing terminology</li>
@@ -311,7 +338,7 @@
                 <div class="flex flex-col gap-2 border-l-3 border-yellow-400 pl-4 bg-gray-900 py-1">
                     <p class="font-bold">Key Insight</p>
                     <ul class="list-disc list-inside text-gray-400 space-y-2">
-                        <li>Users struggled with <b class="text-gray-200">long questions</b> long questions and often skipped fields they assumed weren’t applicable.</li>
+                        <li>Users struggled with <b class="text-gray-200">long questions</b> long questions and often skipped fields they assumed weren't applicable.</li>
                         <li><b class="text-gray-200">Skip logic</b> was essential to reduce mental load.</li>
                         <li>Supervisors wanted real-time syncing and completion alerts</li>
                         <li>Field-level hints and error validation reduced hesitation during form input.</li>
@@ -369,7 +396,7 @@
                         </div>
                     </div>
     
-                    <p class="text-gray-400 mt-4 font-light">These insights directly influenced the design of CHIP’s interface for ASHAs—prioritizing simple, guided forms with local language support, offline functionality, and visual cues—empowering users like Suman Devi to complete their daily health tasks confidently and independently, even in low-connectivity, high-pressure field conditions.</p>
+                    <p class="text-gray-400 mt-4 font-light">These insights directly influenced the design of CHIP's interface for ASHAs—prioritizing simple, guided forms with local language support, offline functionality, and visual cues—empowering users like Suman Devi to complete their daily health tasks confidently and independently, even in low-connectivity, high-pressure field conditions.</p>
                 </div>
     
                 <!-- ANM (Sub-Health Center Level User) -->
@@ -413,7 +440,7 @@
                         </div>
                     </div>
     
-                    <p class="text-gray-400 mt-4 font-light">These needs shaped CHIP’s design for ANMs like Rekha Sharma by introducing dashboard summaries, editable records with audit trails, and streamlined access to family-level data—enabling her to manage heavy data loads efficiently while maintaining accuracy and accountability across multiple responsibilities.</p>
+                    <p class="text-gray-400 mt-4 font-light">These needs shaped CHIP's design for ANMs like Rekha Sharma by introducing dashboard summaries, editable records with audit trails, and streamlined access to family-level data—enabling her to manage heavy data loads efficiently while maintaining accuracy and accountability across multiple responsibilities.</p>
                 </div>
 
                 <!-- MO/Staff Nurse/Lab Tech (PHC Level Users) -->
@@ -460,7 +487,7 @@
                     <p class="text-gray-400 mt-4 font-light">To support users like Dr. Shikha Bansal, CHIP was designed with RBAC-based data visibility, exportable reports, and smart analytics—providing high-level summaries with the flexibility to drill down, flag inconsistencies, and make informed decisions quickly within a busy PHC environment.</p>
                 </div>
             </div>
-            <p class="text-gray-400 mb-4 font-light mt-4">Together, these personas ensured that CHIP’s design addressed the diverse goals, constraints, and workflows of its core users—whether conducting surveys in the field, managing data at the SHC, or overseeing operations at the PHC—creating a system that is inclusive, role-specific, and grounded in real-world use.</p>
+            <p class="text-gray-400 mb-4 font-light mt-4">Together, these personas ensured that CHIP's design addressed the diverse goals, constraints, and workflows of its core users—whether conducting surveys in the field, managing data at the SHC, or overseeing operations at the PHC—creating a system that is inclusive, role-specific, and grounded in real-world use.</p>
         </div>
     </div>
 
@@ -492,9 +519,9 @@
                 <p class="text-xl font-bold">Problem Framing</p>
                 <p class="text-gray-400 mt-4">I broke down the complex user journeys into <b class="text-gray-200">role-specific problem statements</b>:</p>
                 <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4 italic">
-                    <li>“How might we simplify long survey forms for ASHAs while minimizing data errors?”</li>
-                    <li>“How might CHOs and ANMs track field-level progress without switching tools?”</li>
-                    <li>“How might we manage access across roles while ensuring data integrity?”</li>
+                    <li>"How might we simplify long survey forms for ASHAs while minimizing data errors?"</li>
+                    <li>"How might CHOs and ANMs track field-level progress without switching tools?"</li>
+                    <li>"How might we manage access across roles while ensuring data integrity?"</li>
                 </ul>
 
                 <p class="text-gray-400 mt-4">These statements helped focus each solution direction while accounting for RBAC governance and technical limitations like offline mode.</p>
@@ -672,7 +699,7 @@
                           </tr>
                           <tr class="border-b">
                             <td class="p-4">Think-Aloud Protocol</td>
-                            <td class="p-4">Understand user’s mental model during tasks</td>
+                            <td class="p-4">Understand user's mental model during tasks</td>
                           </tr>
                           <tr class="border-b">
                             <td class="p-4">Task-Based Scenarios</td>
@@ -718,7 +745,7 @@
                     </div>
                 </div>
 
-                <p class="text-gray-400 mt-2">These measurable gains validated the design decisions made throughout CHIP’s development—proving that a user-centered, context-aware approach can drive both adoption and efficiency at scale.</p>
+                <p class="text-gray-400 mt-2">These measurable gains validated the design decisions made throughout CHIP's development—proving that a user-centered, context-aware approach can drive both adoption and efficiency at scale.</p>
 
             </div>
         </div>
@@ -889,7 +916,7 @@
                     <div class="flex flex-col gap-2">
                         <h3 class="text-xl lg:text-2xl font-semibold">ABHA ID Integration</h3>
                         <p class="text-gray-300 font-medium">Seamless Health ID Linking Without Disrupting Workflows</p>
-                        <p class="text-gray-400 font-light">This module enables optional ABHA ID creation or linking during or after registration, supporting both Aadhaar and mobile-based methods. With a guided, non-blocking flow, it promotes interoperability with India’s digital health stack—without slowing down frontline tasks.</p>
+                        <p class="text-gray-400 font-light">This module enables optional ABHA ID creation or linking during or after registration, supporting both Aadhaar and mobile-based methods. With a guided, non-blocking flow, it promotes interoperability with India's digital health stack—without slowing down frontline tasks.</p>
                     </div>
 
                     <div class="flex flex-col gap-4 lg:flex-row items-center">
@@ -1061,7 +1088,7 @@
                     <div class="flex flex-col gap-2">
                         <h3 class="text-xl lg:text-2xl font-semibold">Role-Based Homepages</h3>
                         <p class="text-gray-300 font-medium">A Personalized Starting Point for Every User Role</p>
-                        <p class="text-gray-400 font-light">The role-based homepage adapts to each user’s responsibilities—showing only relevant tasks, alerts, and shortcuts. By minimizing clutter and prioritizing daily actions, it boosts focus, reduces errors, and encourages consistent, confident app use.</p>
+                        <p class="text-gray-400 font-light">The role-based homepage adapts to each user's responsibilities—showing only relevant tasks, alerts, and shortcuts. By minimizing clutter and prioritizing daily actions, it boosts focus, reduces errors, and encourages consistent, confident app use.</p>
                     </div>
 
                     <div class="flex flex-col gap-4 lg:flex-row items-center">
@@ -1087,7 +1114,7 @@
                             <div>
                                 <p class="font-medium text-xl">Benefits:</p>
                                 <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
-                                    <li>Reduces cognitive overload by showing only what’s needed</li>
+                                    <li>Reduces cognitive overload by showing only what's needed</li>
                                     <li>Helps users focus on high-priority tasks</li>
                                     <li>Encourages consistent usage through intuitive layout</li>
                                 </ul>
